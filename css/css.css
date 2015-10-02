@@ -1,0 +1,92 @@
+body{
+     background-color:#F0F0F0;
+     font-family:"Segoe UI",Verdana,Tahoma;
+     font-size:18px;
+}
+#frmlogin{
+     margin-left:35%;
+     margin-top:10%;
+}
+
+h1{
+     color:#FFF;
+     padding-top:0;
+     -moz-padding-top:1px;
+     text-shadow: 0.1em 0.1em #333;
+     text-align:center;
+     font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+#logintopo{
+     width:350px;
+     height:52px;
+     background-color:#06C;
+     -webkit-border-top-left-radius: 7px;
+     -webkit-border-top-right-radius: 7px;
+     -moz-border-radius-topleft: 7px;
+     -moz-border-radius-topright: 7px;
+     border-top-left-radius: 7px;
+     border-top-right-radius: 7px;
+     box-shadow: 5px 5px 5px #CCC;
+}
+#loginconteudo{
+     background-color:#fff;
+     width:350px;
+     height:150px;
+     box-shadow: 5px 5px 5px #CCC;
+     text-align:center;
+     padding-top:30px;
+
+}
+
+label{
+     color:#333;
+     font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+     margin-left:-10px;
+     text-align:right;
+}
+
+input[type='text'], input[type='password'] {
+     border:solid 2px #666;
+     margin-top:10px;
+     width:190px;
+     height:25px; 
+}
+
+input[type='text']:focus, input[type='password']:focus{
+     border:solid 2px #006;
+     margin-top:10px;
+     width:190px;
+}
+
+#btn{
+     border:2px solid #069;
+     background-color:#FFF;
+     margin-top:25px;
+     width:192px;
+     height:30px;
+     color:069;
+     margin-left:40px;
+     -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+     border-radius: 2px;
+     text-transform:capitalize;
+     font-size:14px;
+}
+
+#btn:hover{
+     background-color:#06C;
+     margin-top:27px;
+     width:190px;
+     height:30px;
+     color:#fff;
+     -moz-color:#fff;
+     -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+     border-radius: 2px;
+     text-transform:capitalize;
+     font-size:14px;
+     cursor:pointer;
+}
+
+

@@ -1,0 +1,14 @@
+	.jumbotron {
+		padding: 0px 0px !important;
+		margin-bottom: 30px;
+		color: inherit;
+		background-color: #FFF !important ;
+	}
+	h2 {
+		margin-top: -39px !important;
+		margin-bottom: 10px !important;
+	}
+	.row {
+     margin-right: auto !important; 
+     margin-left: auto !important; 
+	 }

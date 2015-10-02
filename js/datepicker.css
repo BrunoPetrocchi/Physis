@@ -1,0 +1,16 @@
+.ui_tpicker_time_label, .ui_tpicker_time {
+	display:none;
+}
+.ui_tpicker_hour_label, .ui_tpicker_minute_label {
+	font-size:9px;
+	font-weight:normal;
+	color:#999;
+	padding:7px 0 3px 5px;
+}
+#ui_tpicker_hour_busca, #ui_tpicker_minute_busca {
+	margin:0 6px 0 6px;
+}
+.ui-datepicker-buttonpane button {
+	font-size:11px;
+	font-weight:bold;
+}
