@@ -15,7 +15,7 @@ if ($_GET['acao'] == 'cadastrar') {
 if ($_GET['acao'] == 'editar') {
       $VarEditarMensalidade = $clsMensalidade->EditaMensalidade($_GET['id'], $_POST['professor'], $_POST['mensalidade'], $_POST['alunos'], $_POST['pagamento'], $_POST['parcela'], $_POST['datepicker1'], $_POST['datepicker']);
      //echo '<pre>';     print_r($VarEditarMensalidade);     echo '</pre>';
-     exit();
+     //exit();
      echo '<script>alert("Mensalidade Alterada com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=mensalidade'; </script>";
 }

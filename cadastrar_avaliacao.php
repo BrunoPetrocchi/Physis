@@ -11,11 +11,48 @@
                <input type="text" class="form-control" id="codigo" name="codigo" placeholder="0" readonly>
           </div>
           <div class="col-md-10">
-               <label for="nome">Nome Aluno</label>
-               <input type="text" class="form-control" id="nome" name="nome" placeholder="Infome Nome do Aluno" >
+               <label for="alunos">Alunos</label>
+               <select class="form-control" id="alunos" name="alunos">
+                    <option value="">Selecione</option>
+                    <?php
+                    $VarConsultaAluno = $clsAlunos->ConsultarAlunos();
+                    for ($i = 0; $i < count($VarConsultaAluno); $i++) {
+                         ?>
+                         <option value="<?php echo $VarConsultaAluno [$i]['codigo_paciente']; ?>"<?php echo $VarConsultaAluno [$i]['codigo_paciente'] == $VarConsultarMensalidadeId [0]['codigo_paciente'] ? 'selected="selected"' : '' ?>>
+                              <?php echo $VarConsultaAluno [$i]['nome']; ?>
+                         </option>
+                         <?php
+                    }
+                    ?>
+               </select>
           </div>
      </div>
      <br/>
+     <div class="row">
+          <div class="col-md-8">
+               <label for="professor">Professor</label>
+               <select class="form-control" id="professor" name="professor">
+                    <option value="">Selecione</option>
+                    <?php
+                    $VarConsultaProfessor = $clsProfessor->ConsultarProfessor();
+                    for ($i = 0; $i < count($VarConsultaProfessor); $i++) {
+                         ?>
+                         <option value="<?php echo $VarConsultaProfessor [$i]['codigo_professor']; ?>">
+                              <?php echo $VarConsultaProfessor [$i]['nome']; ?>
+                         </option>
+                         <?php
+                    }
+                    ?>
+               </select>
+          </div>
+          <div class="col-md-4">
+               <label for="datepicker">Data</label>
+               <input type="text" class="form-control" id="datepicker" name="datepicker" placeholder="Informe a data">
+          </div>
+     </div>
+     <br/><br/>
+     <h3></h3>
+     <br/><br/>
      <div class="row">
           <div class="col-md-4">
                <label for="rg">Estado Civil</label>
@@ -26,7 +63,7 @@
                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Informe o CPF">
           </div>
           <div class="col-md-4">
-              <label for="rg">RG</label>
+               <label for="rg">RG</label>
                <input type="text" class="form-control" id="rg" name="rg" placeholder="Informe o RG"> 
           </div>
      </div>
@@ -93,24 +130,11 @@
                <input type="text" class="form-control" id="legal" name="legal" placeholder="Infome o Responsável Legal">
           </div>
      </div>
-     
+
      <div class="row">
           <br/>
           <div class="col-md-4">
-               <label for="professor">Professor</label>
-               <select class="form-control" id="professor" name="professor">
-                    <option value="">Selecione</option>
-                    <?php
-                    $VarConsultaProfessor = $clsProfessor->ConsultarProfessor();
-                    for ($i = 0; $i < count($VarConsultaProfessor); $i++) {
-                         ?>
-                         <option value="<?php echo $VarConsultaProfessor [$i]['codigo_professor']; ?>">
-                              <?php echo $VarConsultaProfessor [$i]['nome']; ?>
-                         </option>
-                         <?php
-                    }
-                    ?>
-               </select>
+               
           </div>
      </div>
 

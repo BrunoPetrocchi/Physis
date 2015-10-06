@@ -72,6 +72,7 @@ $clsPresenca = new Presenca();
                   $_GET['pagina'] == "acaoalunos" ||
                   $_GET['pagina'] == "acaopatrimonio" ||
                   $_GET['pagina'] == "acaomensalidade" ||
+                  $_GET['pagina'] == "acaoavaliacao" ||
                   $_GET['pagina'] == "editar_professor" ||
                   $_GET['pagina'] == "professor" ||
                   $_GET['pagina'] == "cadastrar_professor" ||
@@ -83,6 +84,9 @@ $clsPresenca = new Presenca();
                   $_GET['pagina'] == "mensalidade" ||
                   $_GET['pagina'] == "cadastrar_mensalidade" ||
                   $_GET['pagina'] == "editar_mensalidade" ||
+                  $_GET['pagina'] == "avaliacao" ||
+                  $_GET['pagina'] == "cadastrar_avaliacao" ||
+                  $_GET['pagina'] == "editar_avaliacao" ||
                   $_GET['pagina'] == "presenca" ||
                   $_GET['pagina'] == "cadastrar_presenca" ||
                   $_GET['pagina'] == "editar_presenca"
