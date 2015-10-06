@@ -1,5 +1,5 @@
-<h2><strong>Cadastrar Alunos</strong></h2>
-<a href="?pagina=alunos"><input type="submit" value="Voltar" class="btncadastrar" id="btnvoltar" style="float:right" /></a>
+<h2><strong>Cadastrar Avaliação</strong></h2>
+<a href="?pagina=avaliacao"><input type="submit" value="Voltar" class="btncadastrar" id="btnvoltar" style="float:right" /></a>
 <br/> <br/>
 
 <script type="text/javascript" src="js/scripts.js"></script>
@@ -51,107 +51,173 @@
           </div>
      </div>
      <br/><br/>
-     <h3></h3>
+     <h3>Anaminese</h3>
+     <br/><br/>
+     <div class="row">
+          <div class="col-md-12">
+               <label for="rg">Queixa Principal:</label>
+               <input type="text" class="form-control" id="queixa" name="queixa" placeholder="Informe a queixa principal">
+          </div>
+     </div>
+     <br/>
+     <div class="row">
+          <div class="col-md-12">
+               <label for="cpf">História da Moléstia atual: </label>
+               <input type="text" class="form-control" id="matual" name="matual" placeholder="Informe a Moléstia atual">
+          </div>
+     </div>
+     <br/>
+     <div class="row">
+          <div class="col-md-12">
+               <label for="rg">História da Moléstia Pregressa: </label>
+               <input type="text" class="form-control" id="mprogessa" name="mprogessa" placeholder="Informe o RG"> 
+          </div>
+     </div>
+     <br/>
+     <div class="row">
+          <div class="col-md-12">
+               <label for="rg">Medicamentos utilizados:  </label>
+               <input type="text" class="form-control" id="medicamentos" name="medicamentos" placeholder="Informe o RG"> 
+          </div>
+     </div>
+     <br/><br/>
+     <h3>Exame Físico</h3>
      <br/><br/>
      <div class="row">
           <div class="col-md-4">
-               <label for="rg">Estado Civil</label>
-               <input type="text" class="form-control" id="estado_civil" name="estado_civil" placeholder="Informe o Estado Civil">
+               <label for="rg">Peso:  </label>
+               <input type="text" class="form-control" id="peso" name="peso" placeholder="Informe o RG"> 
           </div>
           <div class="col-md-4">
-               <label for="cpf">CPF</label>
-               <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Informe o CPF">
+               <label for="rg">Altura:  </label>
+               <input type="text" class="form-control" id="altura" name="altura" placeholder="Informe o RG"> 
           </div>
           <div class="col-md-4">
-               <label for="rg">RG</label>
-               <input type="text" class="form-control" id="rg" name="rg" placeholder="Informe o RG"> 
+               <label for="rg">IMC:  </label>
+               <input type="text" class="form-control" id="imc" name="imc" readonly> 
           </div>
+     </div>
+     <br/><br/>
+     <strong>Circunferência abdominal </strong>
+     <br/><br/>
+     <div class="row">
+          <div class="col-md-4">
+               <label for="rg">Umbigo:  </label>
+               <input type="text" class="form-control" id="peso" name="peso" placeholder="Informe o RG"> 
+          </div>
+          <div class="col-md-4">
+               <label for="rg">5cm a cima:  </label>
+               <input type="text" class="form-control" id="altura" name="altura" placeholder="Informe o RG"> 
+          </div>
+          <div class="col-md-4">
+               <label for="rg">5 cm abaixo:  </label>
+               <input type="text" class="form-control" id="imc" name="imc" readonly> 
+          </div>
+     </div>
+     <br/><br/>
+     <strong>Dados Vitais</strong>
+     <br/><br/>
+     <div class="row">
+          <div class="col-md-4">
+               <label for="rg">Pressão Arterial:  </label>  
+               <div class="input-group">                   
+                    <input type="text" class="form-control" aria-describedby="sizing-addon2">
+                    <span class="input-group-addon" id="sizing-addon2">mmHg</span>
+               </div>
+          </div>
+          <div class="col-md-4">
+               <label for="rg">Frequência Cardíaca:  </label>  
+               <div class="input-group">                   
+                    <input type="text" class="form-control" aria-describedby="sizing-addon2">
+                    <span class="input-group-addon" id="sizing-addon2">bpm</span>
+               </div>
+          </div>
+          <div class="col-md-4">
+               <label for="rg">Frequência Respiratória:  </label>  
+               <div class="input-group">                   
+                    <input type="text" class="form-control" aria-describedby="sizing-addon2">
+                    <span class="input-group-addon" id="sizing-addon2">rpm</span>
+               </div>
+          </div>          
      </div>
      <br/>
      <div class="row">
           <div class="col-md-4">
-               <label for="datepicker">Data Nasc.</label>
-               <input type="text" class="form-control" id="datepicker" name="datepicker" placeholder="Informe a Data de Nascimento">
-          </div>
-          <div class="col-md-4">
-               <label for="rg">Telefone Fixo</label>
-               <input type="text" class="form-control" id="fixo" name="fixo" placeholder="Informe o Telefone Fixo">
-          </div>
-          <div class="col-md-4">
-               <label for="celular">Telefone Celular</label>
-               <input type="text" class="form-control" name="celular" id="celular" placeholder="Informe o Telefone Celular">
+               <label for="rg">Temperatura:  </label>  
+               <div class="input-group">                   
+                    <input type="text" class="form-control" aria-describedby="sizing-addon2">
+                    <span class="input-group-addon" id="sizing-addon2">ºC</span>
+               </div>
           </div>
      </div>
      <br/>
      <div class="row">
-          <div class="col-md-4">
-               <label for="uf">UF</label>
-               <select type="text" class="form-control" id="estado" name="estado" placeholder="Informe o Estado"></select>
-          </div>
-          <div class="col-md-4">
-               <label for="cidade">Cidade</label>
-               <select type="text" class="form-control" id="cidade" name="cidade" placeholder="Informe a Cidade"></select>
-          </div>
-          <div class="col-md-4">
-               <label for="endereco">Endere&ccedil;o</label>
-               <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Informe o Endere&ccedil;o">
-          </div>
-
+          <div class="col-md-12">
+               <label for="rg">Presença de Pontos Dolorosos:  </label>  
+               <textarea class="form-control" rows="3"></textarea> </div>
      </div>
-     <br/>
+     <br/><br/>
+     <h3>Exame de Movimentação</h3>
+     <br/><br/>     
      <div class="row">
           <div class="col-md-4">
-               <label for="numero">N&uacute;mero</label>
-               <input type="text" class="form-control" id="numero" name="numero" placeholder="Informe o Numero">
+               <label for="permissao">Ruídos Articulares: </label>
+               <select class="form-control" id="permissao" name="permissao">
+                    <option value="">Selecione</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+               </select>
           </div>
-          <div class="col-md-4">
-               <label for="bairro">Bairro</label>
-               <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Informe o Bairro">
-          </div>
-          <div class="col-md-4">
-               <label for="cep">CEP</label>
-               <input type="text" class="form-control" id="cep" name="cep" placeholder="Informe o CEP">
-          </div>
-     </div>
-     <div class="row">
-          <div class="col-md-4">
-               <br/>
-               <label for="atual">Profissão Atual</label>
-               <input type="text" class="form-control" id="atual" name="atual" placeholder="Informe a Profissão Atual">
-          </div>
-          <div class="col-md-4">
-               <br/>
-               <label for="anterior">Profissão Anterior</label>
-               <input type="text" class="form-control" id="anterior" name="anterior" placeholder="Informe a Profissão Anterior">
-          </div>
-          <div class="col-md-4">
-               <br/>
-               <label for="legal">Responsável Legal</label>
-               <input type="text" class="form-control" id="legal" name="legal" placeholder="Infome o Responsável Legal">
-          </div>
-     </div>
-
-     <div class="row">
-          <br/>
-          <div class="col-md-4">
-               
-          </div>
-     </div>
-
-     <div class="row">
-          <br/>
           <div class="col-md-8">
-               <label for="numero">Observação</label>
-               <textarea class="form-control" rows="3" id="observacao" name="observacao"><?php echo $VarProfessorId[0]['observacao']; ?></textarea>
+               <label for="rg">Local:</label>
+               <input type="text" class="form-control" id="queixa" name="queixa" placeholder="Informe a queixa principal">
           </div>
      </div>
      <br/>
-     <div id="botoes" >
+     <div class="row">
           <div class="col-md-4">
-               <input type="submit"  class="btn btn-success" id="btnsalvar" name="salvar" value="Salvar"/>              
+               <label for="permissao">Dor ao movimento: </label>
+               <select class="form-control" id="permissao" name="permissao">
+                    <option value="">Selecione</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+               </select>
           </div>
-
-
+          <div class="col-md-8">
+               <label for="rg">Local:</label>
+               <input type="text" class="form-control" id="queixa" name="queixa" placeholder="Informe a queixa principal">
+          </div>
      </div>
-
+     <br/>
+     <div class="row">
+          <div class="col-md-4">
+               <label for="permissao">Dor em repouso: </label>
+               <select class="form-control" id="permissao" name="permissao">
+                    <option value="">Selecione</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+               </select>
+          </div>
+          <div class="col-md-8">
+               <label for="rg">Local:</label>
+               <input type="text" class="form-control" id="queixa" name="queixa" placeholder="Informe a queixa principal">
+          </div>
+     </div>
+     <br/><br/>
+     <h3>Avaliação Postural</h3>
+     <br/><br/>
+     <div class="row">
+          <div class="col-md-12">
+               <textarea class="form-control" rows="3"></textarea> </div>
+     </div>
+     <br/><br/>
+     <h3>Objetivos Fisioterapeuiticos</h3>
+     <br/><br/>
+     <textarea class="form-control" rows="3"></textarea>
+<br/><br/>
+<div id="botoes" >
+     <div class="col-md-4">
+          <input type="submit"  class="btn btn-success" id="btnsalvar" name="salvar" value="Salvar"/>              
+     </div>
+</div>
 </form>

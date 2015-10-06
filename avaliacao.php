@@ -2,7 +2,7 @@
 $VarListaAlunos = $clsAlunos->ConsultarAlunos();
 ?>
 <h2><strong>Alunos</strong></h2>
-<a href="?pagina=cadastrar_alunos"><input type="submit" value="Cadastrar" class="btncadastrar" style="float:right" /></a>
+<a href="?pagina=cadastrar_avaliacao"><input type="submit" value="Cadastrar" class="btncadastrar" style="float:right" /></a>
 <br/><br/>
 <form method="post" name="consultaraluno" id="consultarfisio">
     <!-- <input type="text" class="form-control" placeholder="Consultar Fisioterapeuta" id="pesquisar" name="pesquisar">
