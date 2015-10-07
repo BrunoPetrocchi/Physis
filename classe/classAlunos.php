@@ -52,7 +52,7 @@ class Alunos {
           '$profissao_atual',
           '$profissao_anterior','$responsavel_legal','$observacao',
           '$professor','','0')";
-          //echo $sql;
+          echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
 
@@ -92,8 +92,20 @@ class Alunos {
           LEFT JOIN pilates.professor as B ON (A.codigo_professor = B.codigo_professor)
           WHERE A.apagado = 0 
           and A.codigo_paciente = '$id'";
-                   // echo $sql;
+          echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+     
+     public function UltimoAluno() {
+          $sql = "SELECT MAX(codigo_paciente) as ULTIMO FROM pilates.paciente";
+          echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+     
+     public function InserirAlunoProfessor($prof,$paci) {
+          $sql = "INSERT INTO pilates.professor_paciente VALUES ('$prof','$paci')";
+        // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
       public function ExcluirAlunos($id) {
           $sql = "UPDATE pilates.paciente SET apagado = 1  where codigo_paciente = '$id'";
