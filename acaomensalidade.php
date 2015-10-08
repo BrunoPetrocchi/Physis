@@ -29,7 +29,7 @@ if ($VarExcluirAlunos == 1) {
      ?>    
      <script type="text/javascript">
           alert("Exclusão Efetuada com Sucesso!");
-          document.location.href = '?pagina=alunos';
+          document.location.href = '?pagina=mensalidade';
      </script>
 
      <?php

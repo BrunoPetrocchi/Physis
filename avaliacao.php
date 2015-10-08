@@ -1,7 +1,7 @@
 <?php
 $VarListaAlunos = $clsAlunos->ConsultarAlunos();
 ?>
-<h2><strong>Alunos</strong></h2>
+<h2><strong>Ficha de Avaliação</strong></h2>
 <a href="?pagina=cadastrar_avaliacao"><input type="submit" value="Cadastrar" class="btncadastrar" style="float:right" /></a>
 <br/><br/>
 <form method="post" name="consultaraluno" id="consultarfisio">
@@ -11,9 +11,8 @@ $VarListaAlunos = $clsAlunos->ConsultarAlunos();
           <thead>
                <tr>
                     <th>Código</th>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Data Nascimento</th>
+                    <th>Aluno</th>
+                    <th>Professor</th>
                     <th>Opção</th>
                </tr>
           </thead>

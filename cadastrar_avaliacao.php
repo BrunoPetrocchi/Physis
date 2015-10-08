@@ -70,14 +70,14 @@
      <div class="row">
           <div class="col-md-12">
                <label for="rg">História da Moléstia Pregressa: </label>
-               <input type="text" class="form-control" id="mprogessa" name="mprogessa" placeholder="Informe o RG"> 
+               <input type="text" class="form-control" id="mprogessa" name="mprogessa" placeholder="Informe a Moléstia Pregressa"> 
           </div>
      </div>
      <br/>
      <div class="row">
           <div class="col-md-12">
                <label for="rg">Medicamentos utilizados:  </label>
-               <input type="text" class="form-control" id="medicamentos" name="medicamentos" placeholder="Informe o RG"> 
+               <input type="text" class="form-control" id="medicamentos" name="medicamentos" placeholder="Informe o Medicamento utilizado"> 
           </div>
      </div>
      <br/><br/>
@@ -86,15 +86,15 @@
      <div class="row">
           <div class="col-md-4">
                <label for="rg">Peso:  </label>
-               <input type="text" class="form-control" id="peso" name="peso" placeholder="Informe o RG"> 
+               <input type="text" class="form-control" id="peso" name="peso" placeholder="Informe o Peso"> 
           </div>
           <div class="col-md-4">
                <label for="rg">Altura:  </label>
-               <input type="text" class="form-control" id="altura" name="altura" placeholder="Informe o RG"> 
+               <input type="text" class="form-control" id="altura" name="altura" placeholder="Informe o Altura"> 
           </div>
           <div class="col-md-4">
                <label for="rg">IMC:  </label>
-               <input type="text" class="form-control" id="imc" name="imc" readonly> 
+               <input type="text" class="form-control" id="imc" name="imc"  placeholder="0" readonly> 
           </div>
      </div>
      <br/><br/>
@@ -102,16 +102,16 @@
      <br/><br/>
      <div class="row">
           <div class="col-md-4">
-               <label for="rg">Umbigo:  </label>
-               <input type="text" class="form-control" id="peso" name="peso" placeholder="Informe o RG"> 
+               <label for="umbigo">Umbigo:  </label>
+               <input type="text" class="form-control" id="umbigo" name="umbigo" > 
           </div>
           <div class="col-md-4">
-               <label for="rg">5cm a cima:  </label>
-               <input type="text" class="form-control" id="altura" name="altura" placeholder="Informe o RG"> 
+               <label for="altura">5cm a cima:  </label>
+               <input type="text" class="form-control" id="altura" name="altura"> 
           </div>
           <div class="col-md-4">
-               <label for="rg">5 cm abaixo:  </label>
-               <input type="text" class="form-control" id="imc" name="imc" readonly> 
+               <label for="abaixo">5 cm abaixo:  </label>
+               <input type="text" class="form-control" id="abaixo" name="abaixo" > 
           </div>
      </div>
      <br/><br/>
@@ -119,79 +119,79 @@
      <br/><br/>
      <div class="row">
           <div class="col-md-4">
-               <label for="rg">Pressão Arterial:  </label>  
+               <label for="arterial">Pressão Arterial:  </label>  
                <div class="input-group">                   
                     <input type="text" class="form-control" aria-describedby="sizing-addon2">
-                    <span class="input-group-addon" id="sizing-addon2">mmHg</span>
+                    <span class="input-group-addon" id="arterial" name="arterial">mmHg</span>
                </div>
           </div>
           <div class="col-md-4">
-               <label for="rg">Frequência Cardíaca:  </label>  
+               <label for="cardiaca">Frequência Cardíaca:  </label>  
                <div class="input-group">                   
                     <input type="text" class="form-control" aria-describedby="sizing-addon2">
-                    <span class="input-group-addon" id="sizing-addon2">bpm</span>
+                    <span class="input-group-addon" id="cardiaca" name="cardiaca">bpm</span>
                </div>
           </div>
           <div class="col-md-4">
-               <label for="rg">Frequência Respiratória:  </label>  
+               <label for="respiratoria">Frequência Respiratória:  </label>  
                <div class="input-group">                   
                     <input type="text" class="form-control" aria-describedby="sizing-addon2">
-                    <span class="input-group-addon" id="sizing-addon2">rpm</span>
+                    <span class="input-group-addon" id="respiratoria" name="respiratoria">rpm</span>
                </div>
           </div>          
      </div>
      <br/>
      <div class="row">
           <div class="col-md-4">
-               <label for="rg">Temperatura:  </label>  
+               <label for="temperatura">Temperatura:  </label>  
                <div class="input-group">                   
                     <input type="text" class="form-control" aria-describedby="sizing-addon2">
-                    <span class="input-group-addon" id="sizing-addon2">ºC</span>
+                    <span class="input-group-addon" id="temperatura" name="temperatura">ºC</span>
                </div>
           </div>
      </div>
      <br/>
      <div class="row">
           <div class="col-md-12">
-               <label for="rg">Presença de Pontos Dolorosos:  </label>  
-               <textarea class="form-control" rows="3"></textarea> </div>
+               <label for="dolorosos">Presença de Pontos Dolorosos:  </label>  
+               <textarea class="form-control" name="dolorosos" rows="3"></textarea> </div>
      </div>
      <br/><br/>
      <h3>Exame de Movimentação</h3>
      <br/><br/>     
      <div class="row">
           <div class="col-md-4">
-               <label for="permissao">Ruídos Articulares: </label>
-               <select class="form-control" id="permissao" name="permissao">
+               <label for="ruidos">Ruídos Articulares: </label>
+               <select class="form-control" id="ruidos" name="ruidos">
                     <option value="">Selecione</option>
                     <option value="1">Sim</option>
                     <option value="0">Não</option>
                </select>
           </div>
           <div class="col-md-8">
-               <label for="rg">Local:</label>
-               <input type="text" class="form-control" id="queixa" name="queixa" placeholder="Informe a queixa principal">
+               <label for="local">Local:</label>
+               <input type="text" class="form-control" id="local" name="local" placeholder="Informe o local do Ruido Articulares">
           </div>
      </div>
      <br/>
      <div class="row">
           <div class="col-md-4">
-               <label for="permissao">Dor ao movimento: </label>
-               <select class="form-control" id="permissao" name="permissao">
+               <label for="movimento">Dor ao movimento: </label>
+               <select class="form-control" id="permissao" name="movimento">
                     <option value="">Selecione</option>
                     <option value="1">Sim</option>
                     <option value="0">Não</option>
                </select>
           </div>
           <div class="col-md-8">
-               <label for="rg">Local:</label>
-               <input type="text" class="form-control" id="queixa" name="queixa" placeholder="Informe a queixa principal">
+               <label for="dorlocal">Local:</label>
+               <input type="text" class="form-control" id="dorlocal" name="dorlocal" placeholder="Informe o local da Dor">
           </div>
      </div>
      <br/>
      <div class="row">
           <div class="col-md-4">
-               <label for="permissao">Dor em repouso: </label>
+               <label for="repouso">Dor em repouso: </label>
                <select class="form-control" id="permissao" name="permissao">
                     <option value="">Selecione</option>
                     <option value="1">Sim</option>
@@ -199,8 +199,8 @@
                </select>
           </div>
           <div class="col-md-8">
-               <label for="rg">Local:</label>
-               <input type="text" class="form-control" id="queixa" name="queixa" placeholder="Informe a queixa principal">
+               <label for="localrepouso">Local:</label>
+               <input type="text" class="form-control" id="localrepouso" name="localrepouso" placeholder="Informe o local da Dor em Repouso">
           </div>
      </div>
      <br/><br/>
@@ -208,12 +208,12 @@
      <br/><br/>
      <div class="row">
           <div class="col-md-12">
-               <textarea class="form-control" rows="3"></textarea> </div>
+               <textarea class="form-control" name="postural" rows="3"></textarea> </div>
      </div>
      <br/><br/>
      <h3>Objetivos Fisioterapeuiticos</h3>
      <br/><br/>
-     <textarea class="form-control" rows="3"></textarea>
+     <textarea class="form-control" name="objetivos"rows="3"></textarea>
 <br/><br/>
 <div id="botoes" >
      <div class="col-md-4">
