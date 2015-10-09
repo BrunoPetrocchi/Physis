@@ -1,5 +1,5 @@
 <?php
-$VarListaAlunos = $clsAlunos->ConsultarAlunos();
+$VarListaAlunos = $clsAvaliacao->ConsultaAvaliacao();
 ?>
 <h2><strong>Avaliação</strong></h2>
 <a href="?pagina=cadastrar_avaliacao"><input type="submit" value="Cadastrar" class="btncadastrar" style="float:right" /></a>
@@ -11,9 +11,9 @@ $VarListaAlunos = $clsAlunos->ConsultarAlunos();
           <thead>
                <tr>
                     <th>Código</th>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Data Nascimento</th>
+                    <th>Aluno</th>
+                    <th>Professor</th>
+                    <th>Data Cadastro</th>
                     <th>Opção</th>
                </tr>
           </thead>
@@ -22,10 +22,10 @@ $VarListaAlunos = $clsAlunos->ConsultarAlunos();
                ?>
                <tbody border="solid 1px" bordercolor="#FFFFFF">
                     <tr>
-                         <td><?php echo $VarListaAlunos [$i]['codigo_paciente']; ?></td>
-                         <td><?php echo $VarListaAlunos [$i]['nome']; ?></td>
-                         <td><?php echo $VarListaAlunos [$i]['cpf']; ?></td>
-                         <td><?php echo $VarListaAlunos [$i]['data_nascimento']; ?></td>
+                         <td><?php echo $VarListaAlunos [$i]['codigo_fichaavaliacao']; ?></td>
+                         <td><?php echo $VarListaAlunos [$i]['ALUNO']; ?></td>
+                         <td><?php echo $VarListaAlunos [$i]['PROFESSOR']; ?></td>
+                         <td><?php echo $VarListaAlunos [$i]['periodo']; ?></td>
                          <td><a href="#" onclick="javascript:confirmar(<?= $VarListaAlunos[$i]['codigo_paciente']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
                               <a href="?pagina=editar_alunos&id=<?php echo $VarListaAlunos[$i]['codigo_paciente']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>

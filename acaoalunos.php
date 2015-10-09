@@ -1,13 +1,11 @@
+
+
 <?php
 
 if ($_GET['acao'] == 'cadastrar') {
      $VarInserirAlunos = $clsAlunos->CadastrarAlunos($_POST['nome'], $_POST['datepicker'], $_POST['estado_civil'], $_POST['cpf'], $_POST['rg'], $_POST['fixo'], $_POST['celular'], $_POST['endereco'], $_POST['bairro'],$_POST['estado'], $_POST['cidade'],$_POST['cep'], $_POST['numero'], $_POST['atual'], $_POST['anterior'], $_POST['legal'], $_POST['observacao'],$_POST['professor']);
-
-     if($VarInserirAlunos == 1){
-          $VarConsultaUltimoPaciente = $clsAlunos -> UltimoAluno();
-          $VarInserirAlunoProfessor = $clsAlunos->InserirAlunoProfessor($_POST['professor'], $VarConsultaUltimoPaciente [0]['ULTIMO']);
-     }
-
+     //echo '<pre>';     print_r($VarInserirAlunos);     echo '</pre>';
+    // exit();
      echo '<script>alert("Alunos Salvo com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=alunos'; </script>";
 }

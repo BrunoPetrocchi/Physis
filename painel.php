@@ -23,7 +23,7 @@ $clsPatrimonio = new Patrimonio();
 include ("classe/classMensalidade.php");
 $clsMensalidade = new Mensalidade();
 
-include ("classe/classAvaliacao.php");
+include ("classe/classAvaliacao");
 $clsAvaliacao = new Avaliacao();
 ?>		
 

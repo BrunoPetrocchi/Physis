@@ -2,56 +2,71 @@
 
 class Avaliacao {
 
-    private $db;
+     private $db;
 
-    public function Avaliacao() {
-        $this->db = $GLOBALS[db_homepage];
-    }
+     public function Avaliacao() {
+          $this->db = $GLOBALS[db_homepage];
+     }
 
-    public function CadastrarAvaliacao($cod_prof, $periodo, $cod_pac) {
+     public function CadastrarAvaliacao($cod_prof, $periodo, $cod_pac) {
 
-        $array_data = explode('/', $data);
-        $data = mktime(0, 0, 0, $array_data[1], $array_data[0], $array_data[2]);
+          $array_data = explode('/', $data);
+          $data = mktime(0, 0, 0, $array_data[1], $array_data[0], $array_data[2]);
 
-        $sql = "INSERT INTO pilates.ficha_avaliacao VALUES (NULL,'$cod_prof','$periodo','$cod_pac')";
-        //echo $sql;
-        return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
-    }
+          $sql = "INSERT INTO pilates.ficha_avaliacao VALUES (NULL,'$cod_prof','$periodo','$cod_pac');";
+         // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
 
-    public function CadastrarAnaminese($principal, $atual, $progressa, $medicamento, $codficha_avali) {
+     public function CadastrarAnaminese($principal, $atual, $progressa, $medicamento, $codficha_avali) {
 
-        $sql = "INSERT INTO pilates.anaminese VALUES (NULL,'$principal','$atual','$progressa','$medicamento','$codficha_avali')";
-        //echo $sql;
-        return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
-    }
+          $sql = "INSERT INTO pilates.anaminese VALUES (NULL,'$principal','$atual','$progressa','$medicamento','$codficha_avali');";
+         // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
 
-    public function CadastrarExameFisico($peso, $altura, $imc, $dolorosos, $respiratorio,$cardiaca,$pressao,$baixo,$cima,$temperatura,$codficha_avali) {
+     public function CadastrarExameFisico($peso, $altura, $imc, $dolorosos, $respiratorio, $cardiaca, $pressao,$umbigo, $baixo, $cima, $temperatura, $codficha_avali) {
 
-        $sql = "INSERT INTO pilates.xame_fisico VALUES (NULL,'$peso','$altura','$imc','$dolorosos','$respiratorio','$cardiaca','$pressao','$baixo','$cima','$temperatura','$codficha_avali' )";
-        //echo $sql;
-        return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
-    }
-    
-      public function CadastrarMovimentacao ($codficha_avali, $lruido, $lrepouso, $repouso, $movimento,$ruido,$lmovimentacao) {
+          $sql = "INSERT INTO pilates.exame_fisico VALUES (NULL,'$peso','$altura','$imc','$dolorosos','$respiratorio','$cardiaca','$pressao','$umbigo','$baixo','$cima','$temperatura','$codficha_avali' );";
+         // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
 
-        $sql = "INSERT INTO pilates.movimentacao VALUES (NULL,'$codficha_avali','$lruido','$lrepouso','$repouso','$movimento','$ruido','$lmovimentacao')";
-        //echo $sql;
-        return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
-    }
-    
-    public function CadastrarPostura ($codficha_avali, $descricao) {
+     public function CadastrarMovimentacao($codficha_avali, $lruido, $lrepouso, $repouso, $movimento, $ruido, $lmovimentacao) {
 
-        $sql = "INSERT INTO pilates.avaliacao_postural VALUES (NULL,'$codficha_avali','$descricao')";
-        //echo $sql;
-        return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
-    }
-    
-    public function CadastrarObjetivos ($codficha_avali, $descricao) {
+          $sql = "INSERT INTO pilates.movimentacao VALUES (NULL,'$codficha_avali','$lruido','$lrepouso','$repouso','$movimento','$ruido','$lmovimentacao');";
+         // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
 
-        $sql = "INSERT INTO pilates.objetivos VALUES (NULL,'$codficha_avali','$descricao')";
-        //echo $sql;
-        return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
-    }
+     public function CadastrarPostura($codficha_avali, $descricao) {
+          $sql = "INSERT INTO pilates.avaliacao_postural VALUES (NULL,'$codficha_avali','$descricao');";
+         // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+
+     public function CadastrarObjetivos($codficha_avali, $descricao) {
+
+          $sql = "INSERT INTO pilates.objetivos VALUES (NULL,'$codficha_avali','$descricao');";
+       //   echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+
+     public function ConsultaAvaliacao() {
+
+          $sql = "SELECT A.codigo_fichaavaliacao,A.codigo_professor,C.nome AS PROFESSOR, A.periodo, A.codigo_paciente,B.nome AS ALUNO FROM pilates.ficha_avaliacao AS A
+          JOIN pilates.paciente AS B ON (B.codigo_paciente = A.codigo_paciente)
+          JOIN pilates.professor AS C ON (C.codigo_professor = A.codigo_professor);";
+          //echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+     
+     public function ConsultaUltimaficha() {
+          $sql = "SELECT MAX(codigo_fichaavaliacao) AS id FROM pilates.ficha_avaliacao;";
+       //   echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+
 
 }
 
