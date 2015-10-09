@@ -23,8 +23,8 @@ $clsPatrimonio = new Patrimonio();
 include ("classe/classMensalidade.php");
 $clsMensalidade = new Mensalidade();
 
-include ("classe/classPresenca.php");
-$clsPresenca = new Presenca();
+include ("classe/classAvaliacao.php");
+$clsAvaliacao = new Avaliacao();
 ?>		
 
 <!DOCTYPE HTML>
@@ -111,6 +111,7 @@ $clsPresenca = new Presenca();
 
 
      <script>
+         
           $("#cpf").mask("999.999.999-99");
           $("#crefito").mask("9/999999-F");
           $("#cep").mask("99999-999");

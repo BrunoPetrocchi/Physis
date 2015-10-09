@@ -28,8 +28,6 @@ $VarListaMensalidade = $clsMensalidade->ConsultarMensalidade();
                          <td><?php echo $VarListaMensalidade [$i]['data_vencimento']; ?></td>
                          <td><a href="#" onclick="javascript:confirmar(<?= $VarListaMensalidade[$i]['codigo_mensalidade']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
-                              <a href="?pagina=editar_mensalidade&id=<?php echo $VarListaMensalidade[$i]['codigo_mensalidade']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
-
                          </td>
                     </tr>
                </tbody>

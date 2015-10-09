@@ -7,19 +7,19 @@
 <form method="post" class="form-horizontal" name="cadalunos" id="cadalunos" action="?pagina=acaopresenca&acao=cadastrar">
      <div class="row">
           <div class="col-md-2">
-               <label for="codigo">C&oacute;digo</label>
+               <label for="codigo">Código</label>
                <input type="text" class="form-control" id="codigo" name="codigo" placeholder="0" readonly>
           </div>
-          <div class="col-md-10">
-               <label for="nome">Nome Aluno</label>
-               <select class="form-control" id="aluno" name="aluno">
+           <div class="col-md-10">
+               <label for="alunos">Aluno</label>
+              <select class="form-control" id="alunos" name="alunos">
                     <option value="">Selecione</option>
                     <?php
-                    $VarListaPresenca = $clsPresenca->ConsultaProfessorPresenca();
-                    for ($i = 0; $i < count($VarListaPresenca); $i++) {
+                    $VarConsultaAluno = $clsAlunos->ConsultarAlunos();
+                    for ($i = 0; $i < count($VarConsultaAluno); $i++) {
                          ?>
-                         <option value="<?php echo $VarListaPresenca [$i]['codigo_paciente']; ?>">
-                              <?php echo $VarListaPresenca [$i]['nome']; ?>
+                         <option value="<?php echo $VarConsultaAluno [$i]['codigo_paciente']; ?>">
+                              <?php echo $VarConsultaAluno [$i]['nome']; ?>
                          </option>
                          <?php
                     }

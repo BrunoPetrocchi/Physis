@@ -12,7 +12,7 @@ h1{
      color:#FFF;
      padding-top:0;
      -moz-padding-top:1px;
-     //text-shadow: 0.1em 0.1em #333;
+     text-shadow: 0.1em 0.1em #333;
      text-align:center;
      font-family:"Segoe UI", Arial, Helvetica, sans-serif;
 }

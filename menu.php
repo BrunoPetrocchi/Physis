@@ -1,6 +1,7 @@
+
 <a href="?pagina=alunos"><div id="paciente"><img src="img/paciente_off.png" /> <br/> <strong>Alunos</strong></a> </div>
 
-<a href="?pagina=avaliacao"><div id="ficha"><img src="img/ficha_off.png" /> <br/> <strong> Avalia&ccedil;&abreve;o </strong></a> </div>
+<a href="?pagina=avaliacao"><div id="ficha"><img src="img/ficha_off.png" /> <br/> <strong> Avalia&ccedil;&abreve;o </strong></a></div>
 
 <a href="?pagina=presenca"><div id="presenca"><img src="img/calendarios_off.png" /> <br/> <strong>Presen&ccedil;a</strong></a></div>
 

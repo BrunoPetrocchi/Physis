@@ -3,7 +3,7 @@
 <?php
 
 if ($_GET['acao'] == 'cadastrar') {
-     $VarInserirPresenca = $clsPresenca->CadastrarPresenca($_POST['aluno'], $_POST['datepicker'], $_POST['entrada'], $_POST['saida']);
+     $VarInserirPresenca = $clsPresenca->CadastrarPresenca($_POST['alunos'], $_POST['datepicker'], $_POST['entrada'], $_POST['saida']);
      //echo '<pre>';     print_r($VarInserirAlunos);     echo '</pre>';
     //exit();
      echo '<script>alert("Alunos Salvo com Sucesso");</script>';
