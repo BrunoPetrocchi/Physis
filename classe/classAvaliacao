@@ -14,44 +14,140 @@ class Avaliacao {
           $data = mktime(0, 0, 0, $array_data[1], $array_data[0], $array_data[2]);
 
           $sql = "INSERT INTO pilates.ficha_avaliacao VALUES (NULL,'$cod_prof','$periodo','$cod_pac');";
-         // echo $sql;
+          // echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+
+     public function EditarAvaliacao($cod_prof, $periodo, $cod_pac, $id) {
+
+          $array_data = explode('/', $data);
+          $data = mktime(0, 0, 0, $array_data[1], $array_data[0], $array_data[2]);
+
+          $sql = "UPDATE pilates.ficha_avaliacao SET  codigo_professor='cod_prof', periodo='periodo', codigo_paciente='cod_pac' WHERE codigo_fichaavaliacao = '$id';";
+
+          // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+
+     public function ConsultaAvaliacaoId($id) {
+
+          $array_data = explode('/', $data);
+          $data = mktime(0, 0, 0, $array_data[1], $array_data[0], $array_data[2]);
+
+          $sql = "SELECT ficha_av.codigo_professor, prof.nome, ficha_av.periodo, ficha_av.codigo_paciente, pac.nome FROM pilates.ficha_avaliacao AS ficha_av 
+          JOIN pilates.professor AS prof ON (ficha_av.codigo_professor = prof.codigo_professor)
+          JOIN pilates.paciente AS pac ON (ficha_av.codigo_paciente = pac.codigo_paciente)
+          WHERE ficha_av.codigo_fichaavaliacao = '1';";
+          // echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
 
      public function CadastrarAnaminese($principal, $atual, $progressa, $medicamento, $codficha_avali) {
 
           $sql = "INSERT INTO pilates.anaminese VALUES (NULL,'$principal','$atual','$progressa','$medicamento','$codficha_avali');";
-         // echo $sql;
+          // echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
 
-     public function CadastrarExameFisico($peso, $altura, $imc, $dolorosos, $respiratorio, $cardiaca, $pressao,$umbigo, $baixo, $cima, $temperatura, $codficha_avali) {
+     public function EditarAnaminese($principal, $atual, $progressa, $medicamento, $codficha_avali, $id) {
+
+          $sql = "UPDATE pilates.anaminese SET  queixa_principal='$principal',molestia_atual='$atual',molestia_progressa='$progressa',medicamento='$medicamento', codigo_fichaavaliacao='$codficha_avali' WHERE codigo_anaminese = '$id';";
+          // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+
+     public function ConsultarAnamineseId($id) {
+          $sql = "SELECT codigo_anaminese, queixa_principal, molestia_atual, molestia_progressa, medicamento
+          FROM pilates.anaminese WHERE codigo_fichaavaliacao = '$id';";
+          // echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+
+     public function CadastrarExameFisico($peso, $altura, $imc, $dolorosos, $respiratorio, $cardiaca, $pressao, $umbigo, $baixo, $cima, $temperatura, $codficha_avali) {
 
           $sql = "INSERT INTO pilates.exame_fisico VALUES (NULL,'$peso','$altura','$imc','$dolorosos','$respiratorio','$cardiaca','$pressao','$umbigo','$baixo','$cima','$temperatura','$codficha_avali' );";
-         // echo $sql;
+          // echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+
+     public function EditarExameFisico($peso, $altura, $imc, $dolorosos, $respiratorio, $cardiaca, $pressao, $umbigo, $baixo, $cima, $temperatura, $codficha_avali, $id) {
+
+          $sql = "UPDATE pilates.exame_fisico SET  peso='$peso',altura='$atual',imc='$imc',ponto_doloroso='$dolorosos',
+          freq_respiratorio='$respiratorio', freq_cardiaca='$cardiaca', pressao='$pressao', umbigo='$umbigo', umbigo_baixo='$baixo',
+          umbigo_cima='$cima',temperatura='$temperatura',codigo_fichaavaliacao='$codficha_avali' WHERE codigo_exame_fisico = '$id';";
+          // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+
+     public function ConsularExameFisicoId($id) {
+
+          $sql = "SELECT peso, altura, imc, ponto_doloroso, freq_respiratoria,
+          freq_cardiaca, pressao, umbigo, umbigo_baixo, umbigo_cima, temperatura
+          FROM pilates.exame_fisico WHERE codigo_fichaavaliacao = '$id';";
+          // echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
 
      public function CadastrarMovimentacao($codficha_avali, $lruido, $lrepouso, $repouso, $movimento, $ruido, $lmovimentacao) {
 
           $sql = "INSERT INTO pilates.movimentacao VALUES (NULL,'$codficha_avali','$lruido','$lrepouso','$repouso','$movimento','$ruido','$lmovimentacao');";
-         // echo $sql;
+          // echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+
+     public function EditarMovimentacao($codficha_avali, $lruido, $lrepouso, $repouso, $movimento, $ruido, $lmovimentacao, $id) {
+
+          $sql = "UPDATE pilates.movimentacao SET  codigo_fichaavaliacao='$codficha_avali',local_ruido='$lruido',local_repouso='$lrepouso',repouso='$repouso',
+          movimento='$movimento', ruido='$ruido', local_movimentacao='$lmovimentacao', WHERE codigo_movimentacao = '$id';";
+          // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+     
+     public function ConsultaMovimentacaoId($id) {
+
+          $sql = "SELECT local_ruido, local_repouso, repouso, movimento, ruido, local_movimentacao FROM pilates.movimentacao
+          WHERE codigo_fichaavaliacao = '$id';";
+          // echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
 
      public function CadastrarPostura($codficha_avali, $descricao) {
           $sql = "INSERT INTO pilates.avaliacao_postural VALUES (NULL,'$codficha_avali','$descricao');";
-         // echo $sql;
+          // echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+
+     public function EditarPostura($codficha_avali, $descricao, $id) {
+          $sql = "UPDATE pilates.avaliacao_postural SET  codigo_fichaavaliacao='$codficha_avali',descricao='$descricao' WHERE codigo_avaliacaopostural = '$id';";
+          // echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+     public function ConsultarPosturaId($id) {
+          $sql = "SELECT descricao FROM pilates.avaliacao_postural WHERE codigo_fichaavaliacao = '$id';";
+          // echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
 
      public function CadastrarObjetivos($codficha_avali, $descricao) {
 
           $sql = "INSERT INTO pilates.objetivos VALUES (NULL,'$codficha_avali','$descricao');";
-       //   echo $sql;
+          //   echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
+     
+     public function EditarObjetivos($codficha_avali, $descricao) {
 
+          $sql = "UPDATE pilates.objetivos SET  codigo_fichaavaliacao='$codficha_avali',descricao='$descricao' WHERE codigo_objetivo = '$id';";
+          //   echo $sql;
+          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+     
+     public function ConsultarObjetivos($id) {
+          $sql = "SELECT descricao FROM pilates.objetivos WHERE codigo_fichaavaliacao = '$id';";
+          // echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+     
      public function ConsultaAvaliacao() {
 
           $sql = "SELECT A.codigo_fichaavaliacao,A.codigo_professor,C.nome AS PROFESSOR, A.periodo, A.codigo_paciente,B.nome AS ALUNO FROM pilates.ficha_avaliacao AS A
@@ -60,13 +156,12 @@ class Avaliacao {
           //echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
-     
+
      public function ConsultaUltimaficha() {
           $sql = "SELECT MAX(codigo_fichaavaliacao) AS id FROM pilates.ficha_avaliacao;";
-       //   echo $sql;
+          //   echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
-
 
 }
 

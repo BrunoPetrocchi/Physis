@@ -16,7 +16,7 @@ if ($_GET['acao'] == 'cadastrar') {
           $VarInserirObjetivos = $clsAvaliacao->CadastrarObjetivos($_POST['descfisio'], $VarConsultaUltimaFicha [0]['id']);
           
      }
-     exit();
+    // exit();
      echo '<script>alert("Avaliação Salvo com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=avaliacao'; </script>";
 }
