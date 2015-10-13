@@ -58,7 +58,7 @@ $clsAvaliacao = new Avaliacao();
           <div id="topo">
                <a href="?pagina=tela_inicial"/><div id="cabecalho"><img src="img/physis.png"/></div></a>
           <div id="menus">
-          <?php include_once "menu.php"; ?>
+               <?php include_once "menu.php"; ?>
           </div>
      </div>
      <div id="palco">
@@ -80,7 +80,7 @@ $clsAvaliacao = new Avaliacao();
                   $_GET['pagina'] == "cadastrar_alunos" ||
                   $_GET['pagina'] == "patrimonio" ||
                   $_GET['pagina'] == "cadastrar_patrimonio" ||
-                  $_GET['pagina'] == "editar_patrimonio"||
+                  $_GET['pagina'] == "editar_patrimonio" ||
                   $_GET['pagina'] == "mensalidade" ||
                   $_GET['pagina'] == "cadastrar_mensalidade" ||
                   $_GET['pagina'] == "editar_mensalidade" ||
@@ -111,17 +111,42 @@ $clsAvaliacao = new Avaliacao();
 
 
      <script>
-         
+
           $("#cpf").mask("999.999.999-99");
           $("#crefito").mask("9/999999-F");
           $("#cep").mask("99999-999");
           $("#celular").mask("(99)99999-9999");
           $("#fixo").mask("(99)9999-9999");
           $("#entrada,#saida").mask("99:99");
+          $("#altura").mask("999");
      </script>
 
      <script type="text/javascript" src="js/jquery.validate.min.js"></script> 
-          <script type="text/javascript" src="js/scripts.js"></script>
+     <script type="text/javascript" src="js/scripts.js"></script>
+
+     <script type="text/javascript">
+     $(document).ready(function () {
+
+          $('#peso, #altura').each(function (i) {
+
+               var valor = $(this).val().replace(/[^0-9\.]+/g, '');
+               $(this).val(valor);
+
+               var soma = $('#peso').val() / ($('#altura').val() / 100 * $('#altura').val() / 100);
+               $('#imc').val(soma.toFixed(2));
+
+          });
+
+          $('#peso, #altura').keyup(function () {
+
+               var valor = $(this).val().replace(/[^0-9\.]+/g, '');
+               $(this).val(valor);
+
+               var soma = $('#peso').val() / ($('#altura').val() / 100 * $('#altura').val() / 100);
+               $('#imc').val(soma.toFixed(2));
+          });
+     });
+     </script>
      <div id="rodape">
           <div id="descricao">
                <strong>Genesis - Copyright &reg; 2015 / 2016 - Desenvolvido por Flow Sistemas</strong>

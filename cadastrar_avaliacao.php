@@ -92,11 +92,11 @@ $altura;
      <div class="row">
           <div class="col-md-4">
                <label for="peso">Peso:  </label>
-               <input type="text" class="form-control" id="peso" name="peso" placeholder="Informe o RG"> 
+               <input type="text" class="form-control" id="peso" name="peso" placeholder="Informe o peso"> 
           </div>
           <div class="col-md-4">
                <label for="altura:">Altura  </label>
-               <input type="text" class="form-control" id="altura" name="altura" placeholder="Informe o RG"> 
+               <input type="text" class="form-control" id="altura" name="altura" placeholder="Informe a altura"> 
           </div>
           <div class="col-md-4">
                <label for="imc">IMC:  </label>
@@ -224,10 +224,12 @@ $altura;
                <textarea class="form-control"  id="descfisio" name="descfisio" rows="3"></textarea>
           </div>
      </div>
+     
      <br/><br/>
      <div id="botoes" >
           <div class="col-md-4">
                <input type="submit"  class="btn btn-success" id="btnsalvar" name="salvar" value="Salvar"/>              
           </div>
      </div>
+     
 </form>
