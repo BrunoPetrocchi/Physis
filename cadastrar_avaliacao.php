@@ -3,11 +3,7 @@
 <br/> <br/>
 
 <script type="text/javascript" src="js/scripts.js"></script>
-<?php
-$peso ;
 
-$altura;        
-?>
 
 
 <form method="post" class="form-horizontal" name="cadalunos" id="cadalunos" action="?pagina=acaoavaliacao&acao=cadastrar">

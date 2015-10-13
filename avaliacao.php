@@ -1,5 +1,5 @@
 <?php
-$VarListaAlunos = $clsAvaliacao->ConsultaAvaliacao();
+$VarListaAvaliacao = $clsAvaliacao->ConsultaAvaliacao();
 ?>
 <h2><strong>Avaliação</strong></h2>
 <a href="?pagina=cadastrar_avaliacao"><input type="submit" value="Cadastrar" class="btncadastrar" style="float:right" /></a>
@@ -18,17 +18,17 @@ $VarListaAlunos = $clsAvaliacao->ConsultaAvaliacao();
                </tr>
           </thead>
           <?php
-          for ($i = 0; $i < count($VarListaAlunos); $i++) {
+          for ($i = 0; $i < count($VarListaAvaliacao); $i++) {
                ?>
                <tbody border="solid 1px" bordercolor="#FFFFFF">
                     <tr>
-                         <td><?php echo $VarListaAlunos [$i]['codigo_fichaavaliacao']; ?></td>
-                         <td><?php echo $VarListaAlunos [$i]['ALUNO']; ?></td>
-                         <td><?php echo $VarListaAlunos [$i]['PROFESSOR']; ?></td>
-                         <td><?php echo $VarListaAlunos [$i]['periodo']; ?></td>
-                         <td><a href="#" onclick="javascript:confirmar(<?= $VarListaAlunos[$i]['codigo_paciente']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
+                         <td><?php echo $VarListaAvaliacao [$i]['codigo_fichaavaliacao']; ?></td>
+                         <td><?php echo $VarListaAvaliacao [$i]['ALUNO']; ?></td>
+                         <td><?php echo $VarListaAvaliacao [$i]['PROFESSOR']; ?></td>
+                         <td><?php echo $VarListaAvaliacao [$i]['periodo']; ?></td>
+                         <td><a href="#" onclick="javascript:confirmar(<?= $VarListaAvaliacao[$i]['codigo_fichaavaliacao']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
-                              <a href="?pagina=editar_alunos&id=<?php echo $VarListaAlunos[$i]['codigo_paciente']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
+                              <a href="?pagina=editar_alunos&id=<?php echo $VarListaAvaliacao[$i]['codigo_fichaavaliacao']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
 
                          </td>
                     </tr>

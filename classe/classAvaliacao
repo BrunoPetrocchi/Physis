@@ -79,7 +79,7 @@ class Avaliacao {
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
 
-     public function ConsularExameFisicoId($id) {
+     public function ConsultarExameFisicoId($id) {
 
           $sql = "SELECT peso, altura, imc, ponto_doloroso, freq_respiratoria,
           freq_cardiaca, pressao, umbigo, umbigo_baixo, umbigo_cima, temperatura
@@ -142,7 +142,7 @@ class Avaliacao {
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
      
-     public function ConsultarObjetivos($id) {
+     public function ConsultarObjetivosId($id) {
           $sql = "SELECT descricao FROM pilates.objetivos WHERE codigo_fichaavaliacao = '$id';";
           // echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);

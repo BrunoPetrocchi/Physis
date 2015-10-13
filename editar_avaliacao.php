@@ -3,10 +3,16 @@
 <br/> <br/>
 
 <script type="text/javascript" src="js/scripts.js"></script>
-<?php
-$peso ;
 
-$altura;        
+<?php
+$VarConsultaAvaliacao = $clsAvaliacao ->ConsultaAvaliacaoId ($_GET['id']);
+$VarConsultaAnaminese = $clsAvaliacao ->ConsultarAnamineseId ($_GET['id']);
+$VarConsultaExameFisico = $clsAvaliacao ->ConsultarExameFisicoId ($_GET['id']);
+$VarConsultaMovimentacao = $clsAvaliacao ->ConsultaMovimentacaoId ($_GET['id']);
+$VarConsultaPostura = $clsAvaliacao ->ConsultarPosturaId ($_GET['id']);
+$VarObjetivos = $clsAvaliacao ->ConsultarObjetivosId ($_GET['id']);
+
+
 ?>
 
 
