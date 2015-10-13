@@ -1,115 +1,31 @@
-<h2><strong>Editar Alunos</strong></h2>
-<a href="?pagina=alunos"><input type="submit" value="Voltar" class="btncadastrar" id="btnvoltar" style="float:right" /></a>
+<h2><strong>Cadastrar Avaliação</strong></h2>
+<a href="?pagina=avaliacao"><input type="submit" value="Voltar" class="btncadastrar" id="btnvoltar" style="float:right" /></a>
 <br/> <br/>
 
 <script type="text/javascript" src="js/scripts.js"></script>
-
 <?php
-     $varAlunosId = $clsAlunos ->ConsultarAlunosId($_GET['id']);
+$peso ;
+
+$altura;        
 ?>
 
-<form method="post" class="form-horizontal" name="frmalunos" id="frmalunos" action="?pagina=acaoalunos&acao=editar&id=<?php echo $varAlunosId [0]['codigo_paciente'] ?>">
+
+<form method="post" class="form-horizontal" name="cadalunos" id="cadalunos" action="?pagina=acaoavaliacao&acao=cadastrar">
      <div class="row">
           <div class="col-md-2">
-               <label for="codigo">C&oacute;digo</label>
-               <input type="text" class="form-control" id="codigo" name="codigo" placeholder="0" readonly value="<?php echo $varAlunosId [0]['codigo_paciente'] ;?>">
+               <label for="codigo">Código</label>
+               <input type="text" class="form-control" id="codigo" name="codigo" placeholder="0" readonly>
           </div>
           <div class="col-md-10">
-               <label for="nome">Nome Aluno</label>
-               <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $varAlunosId [0]['nome'] ;?>">
-          </div>
-     </div>
-     <br/>
-     <div class="row">
-          <div class="col-md-4">
-               <label for="rg">Estado Civil</label>
-               <input type="text" class="form-control" id="estado_civil" name="estado_civil" value="<?php echo $varAlunosId [0]['estado_civil'] ;?>">
-          </div>
-          <div class="col-md-4">
-               <label for="cpf">CPF</label>
-               <input type="text" class="form-control" id="cpf" name="cpf" value="<?php echo $varAlunosId [0]['cpf'] ;?>">
-          </div>
-          <div class="col-md-4">
-              <label for="rg">RG</label>
-               <input type="text" class="form-control" id="rg" name="rg" value="<?php echo $varAlunosId [0]['rg'] ;?>"> 
-          </div>
-     </div>
-     <br/>
-     <div class="row">
-          <div class="col-md-4">
-               <label for="datepicker">Data Nasc.</label>
-               <input type="text" class="form-control" id="datepicker" name="datepicker" value="<?php echo $varAlunosId [0]['data_nascimento'] ;?>" >
-          </div>
-          <div class="col-md-4">
-               <label for="rg">Telefone Fixo</label>
-               <input type="text" class="form-control" id="fixo" name="fixo" value="<?php echo $varAlunosId [0]['telefone_fixo'] ;?>">
-          </div>
-          <div class="col-md-4">
-               <label for="celular">Telefone Celular</label>
-               <input type="text" class="form-control" name="celular" id="celular" value="<?php echo $varAlunosId [0]['telefone_celular'] ;?>">
-          </div>
-     </div>
-     <br/>
-     <div class="row">
-          <div class="col-md-4">
-               <label for="uf">UF</label>
-               <select type="text" class="form-control" id="estado" name="estado" value="<?php echo $varAlunosId [0]['uf'] ;?>" ></select>
-          </div>
-          <div class="col-md-4">
-               <label for="cidade">Cidade</label>
-               <select type="text" class="form-control" id="cidade" name="cidade" value="<?php echo $varAlunosId [0]['cidade'] ;?>"></select>
-          </div>
-          <div class="col-md-4">
-               <label for="endereco">Endere&ccedil;o</label>
-               <input type="text" class="form-control" id="endereco" name="endereco" value="<?php echo $varAlunosId [0]['endereco'] ;?>">
-          </div>
-
-     </div>
-     <br/>
-     <div class="row">
-          <div class="col-md-4">
-               <label for="numero">N&uacute;mero</label>
-               <input type="text" class="form-control" id="numero" name="numero" value="<?php echo $varAlunosId [0]['numero'] ;?>">
-          </div>
-          <div class="col-md-4">
-               <label for="bairro">Bairro</label>
-               <input type="text" class="form-control" id="bairro" name="bairro" value="<?php echo $varAlunosId [0]['bairro'] ;?>">
-          </div>
-          <div class="col-md-4">
-               <label for="cep">CEP</label>
-               <input type="text" class="form-control" id="cep" name="cep" value="<?php echo $varAlunosId [0]['cep'] ;?>">
-          </div>
-     </div>
-     <div class="row">
-          <div class="col-md-4">
-               <br/>
-               <label for="atual">Profissão Atual</label>
-               <input type="text" class="form-control" id="atual" name="atual" value="<?php echo $varAlunosId [0]['profissao_atual'] ;?>">
-          </div>
-          <div class="col-md-4">
-               <br/>
-               <label for="anterior">Profissão Anterior</label>
-               <input type="text" class="form-control" id="anterior" name="anterior" value="<?php echo $varAlunosId [0]['profissao_anterior'] ;?>">
-          </div>
-          <div class="col-md-4">
-               <br/>
-               <label for="legal">Responsável Legal</label>
-               <input type="text" class="form-control" id="legal" name="legal" value="<?php echo $varAlunosId [0]['responsavel_legal'] ;?>" >
-          </div>
-     </div>
-     
-     <div class="row">
-          <br/>
-          <div class="col-md-4">
-               <label for="professor">Professor</label>
-               <select class="form-control" id="professor" name="professor">
+               <label for="alunos">Alunos</label>
+               <select class="form-control" id="alunos" name="alunos">
                     <option value="">Selecione</option>
                     <?php
-                    $VarConsultaProfessor = $clsProfessor->ConsultarProfessor();
-                    for ($i = 0; $i < count($VarConsultaProfessor); $i++) {
+                    $VarConsultaAluno = $clsAlunos->ConsultarAlunos();
+                    for ($i = 0; $i < count($VarConsultaAluno); $i++) {
                          ?>
-                         <option value="<?php echo $VarConsultaProfessor [$i]['codigo_professor']; ?>" <?php echo $VarConsultaProfessor [$i]['codigo_professor'] == $varAlunosId [0]['codigo_professor'] ? 'selected="selected"' : '' ?>>
-                              <?php echo $VarConsultaProfessor [$i]['nome']; ?>
+                         <option value="<?php echo $VarConsultaAluno [$i]['codigo_paciente']; ?>"<?php echo $VarConsultaAluno [$i]['codigo_paciente'] == $VarConsultarMensalidadeId [0]['codigo_paciente'] ? 'selected="selected"' : '' ?>>
+                              <?php echo $VarConsultaAluno [$i]['nome']; ?>
                          </option>
                          <?php
                     }
@@ -117,21 +33,203 @@
                </select>
           </div>
      </div>
-
+     <br/>
      <div class="row">
-          <br/>
           <div class="col-md-8">
-               <label for="observacao">Observação</label>
-               <textarea class="form-control" rows="3" id="observacao" name="observacao"><?php echo $varAlunosId [0]['observacao']; ?></textarea>
+               <label for="professor">Professor</label>
+               <select class="form-control" id="professor" name="professor">
+                    <option value="">Selecione</option>
+                    <?php
+                    $VarConsultaProfessor = $clsProfessor->ConsultarProfessor();
+                    for ($i = 0; $i < count($VarConsultaProfessor); $i++) {
+                         ?>
+                         <option value="<?php echo $VarConsultaProfessor [$i]['codigo_professor']; ?>">
+                              <?php echo $VarConsultaProfessor [$i]['nome']; ?>
+                         </option>
+                         <?php
+                    }
+                    ?>
+               </select>
+          </div>
+          <div class="col-md-4">
+               <label for="datepicker">Data</label>
+               <input type="text" class="form-control" id="datepicker" name="datepicker" placeholder="Informe a data">
+          </div>
+     </div>
+     <br/><br/>
+     <h3>Anaminese</h3>
+     <br/><br/>
+     <div class="row">
+          <div class="col-md-12">
+               <label for="qprincipal">Queixa Principal:</label>
+               <input type="text" class="form-control" id="qprincipal" name="qprincipal" placeholder="Informe a queixa principal">
           </div>
      </div>
      <br/>
+     <div class="row">
+          <div class="col-md-12">
+               <label for="matual">História da Moléstia atual: </label>
+               <input type="text" class="form-control" id="matual" name="matual" placeholder="Informe a Moléstia atual">
+          </div>
+     </div>
+     <br/>
+     <div class="row">
+          <div class="col-md-12">
+               <label for="rg">História da Moléstia Pregressa: </label>
+               <input type="text" class="form-control" id="mprogessa" name="mprogessa" placeholder="Informe o RG"> 
+          </div>
+     </div>
+     <br/>
+     <div class="row">
+          <div class="col-md-12">
+               <label for="rg">Medicamentos utilizados:  </label>
+               <input type="text" class="form-control" id="medicamentos" name="medicamentos" placeholder="Informe o RG"> 
+          </div>
+     </div>
+     <br/><br/>
+     <h3>Exame Físico</h3>
+     <br/><br/>
+     <div class="row">
+          <div class="col-md-4">
+               <label for="peso">Peso:  </label>
+               <input type="text" class="form-control" id="peso" name="peso" placeholder="Informe o peso"> 
+          </div>
+          <div class="col-md-4">
+               <label for="altura:">Altura  </label>
+               <input type="text" class="form-control" id="altura" name="altura" placeholder="Informe a altura"> 
+          </div>
+          <div class="col-md-4">
+               <label for="imc">IMC:  </label>
+               <input type="text" class="form-control" id="imc" name="imc" readonly> 
+          </div>
+     </div>
+     <br/><br/>
+     <strong>Circunferência abdominal </strong>
+     <br/><br/>
+     <div class="row">
+          <div class="col-md-4">
+               <label for="umbigo">Umbigo:  </label>
+               <input type="text" class="form-control" id="umbigo" name="umbigo" > 
+          </div>
+          <div class="col-md-4">
+               <label for="cima">5cm a cima:  </label>
+               <input type="text" class="form-control" id="cima" name="cima" > 
+          </div>
+          <div class="col-md-4">
+               <label for="abaixo">5 cm abaixo:  </label>
+               <input type="text" class="form-control" id="abaixo" name="abaixo" > 
+          </div>
+     </div>
+     <br/><br/>
+     <strong>Dados Vitais</strong>
+     <br/><br/>
+     <div class="row">
+          <div class="col-md-4">
+               <label for="rg">Pressão Arterial:  </label>  
+               <div class="input-group">                   
+                    <input type="text" class="form-control" name="arterial" aria-describedby="sizing-addon2">
+                    <span class="input-group-addon" id="sizing-addon2">mmHg</span>
+               </div>
+          </div>
+          <div class="col-md-4">
+               <label for="rg">Frequência Cardíaca:  </label>  
+               <div class="input-group">                   
+                    <input type="text" class="form-control"  name="cardiaca" aria-describedby="sizing-addon2">
+                    <span class="input-group-addon" id="sizing-addon2">bpm</span>
+               </div>
+          </div>
+          <div class="col-md-4">
+               <label for="rg">Frequência Respiratória:  </label>  
+               <div class="input-group">                   
+                    <input type="text" class="form-control" name="respiratoria" aria-describedby="sizing-addon2">
+                    <span class="input-group-addon" id="sizing-addon2">rpm</span>
+               </div>
+          </div>          
+     </div>
+     <br/>
+     <div class="row">
+          <div class="col-md-4">
+               <label for="rg">Temperatura:  </label>  
+               <div class="input-group">                   
+                    <input type="text" class="form-control" name="temperatura" aria-describedby="sizing-addon2">
+                    <span class="input-group-addon" id="sizing-addon2">ºC</span>
+               </div>
+          </div>
+     </div>
+     <br/>
+     <div class="row">
+          <div class="col-md-12">
+               <label for="rg">Presença de Pontos Dolorosos:  </label>  
+               <textarea class="form-control" name="dolorosos" rows="3"></textarea> </div>
+     </div>
+     <br/><br/>
+     <h3>Exame de Movimentação</h3>
+     <br/><br/>     
+     <div class="row">
+          <div class="col-md-4">
+               <label for="ruido">Ruídos Articulares: </label>
+               <select class="form-control" id="ruido" name="ruido">
+                    <option value="">Selecione</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+               </select>
+          </div>
+          <div class="col-md-8">
+               <label for="localruido">Local:</label>
+               <input type="text" class="form-control" id="localruido" name="localruido" placeholder="Informe a queixa principal">
+          </div>
+     </div>
+     <br/>
+     <div class="row">
+          <div class="col-md-4">
+               <label for="movimento">Dor ao movimento: </label>
+               <select class="form-control" id="movimento" name="movimento">
+                    <option value="">Selecione</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+               </select>
+          </div>
+          <div class="col-md-8">
+               <label for="lmovimento">Local:</label>
+               <input type="text" class="form-control" id="lmovimento" name="lmovimento" placeholder="Informe a queixa principal">
+          </div>
+     </div>
+     <br/>
+     <div class="row">
+          <div class="col-md-4">
+               <label for="repouso">Dor em repouso: </label>
+               <select class="form-control" id="repouso" name="repouso">
+                    <option value="">Selecione</option>
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+               </select>
+          </div>
+          <div class="col-md-8">
+               <label for="localrepouso">Local:</label>
+               <input type="text" class="form-control" id="localrepouso" name="localrepouso" placeholder="Informe a queixa principal">
+          </div>
+     </div>
+     <br/><br/>
+     <h3>Avaliação Postural</h3>
+     <br/>
+     <div class="row">
+          <div class="col-md-12">
+               <textarea class="form-control" id="descpostural" name="descpostural" rows="3"></textarea> </div>
+     </div>
+     <br/><br/>
+     <h3>Objetivos Fisioterapeuiticos</h3>
+     <br/>
+     <div class="row">
+          <div class="col-md-12">
+               <textarea class="form-control"  id="descfisio" name="descfisio" rows="3"></textarea>
+          </div>
+     </div>
+     
+     <br/><br/>
      <div id="botoes" >
           <div class="col-md-4">
                <input type="submit"  class="btn btn-success" id="btnsalvar" name="salvar" value="Salvar"/>              
           </div>
-
-
      </div>
-
+     
 </form>
