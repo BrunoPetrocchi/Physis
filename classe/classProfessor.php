@@ -21,7 +21,7 @@ class Professores {
 			codigo_professor,
 			nome,
 			endereco,
-		  numero,
+                        numero,
 			bairro, 
 			cidade,
 			cep,
@@ -39,7 +39,7 @@ class Professores {
                          status
 			FROM pilates.professor 
 			WHERE apagado = 1
-      ORDER BY codigo_professor DESC";
+                        ORDER BY codigo_professor DESC";
           //	echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }

@@ -28,7 +28,7 @@ $VarListaAvaliacao = $clsAvaliacao->ConsultaAvaliacao();
                          <td><?php echo $VarListaAvaliacao [$i]['periodo']; ?></td>
                          <td><a href="#" onclick="javascript:confirmar(<?= $VarListaAvaliacao[$i]['codigo_fichaavaliacao']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
-                              <a href="?pagina=editar_alunos&id=<?php echo $VarListaAvaliacao[$i]['codigo_fichaavaliacao']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
+                              <a href="?pagina=editar_avaliacao&id=<?php echo $VarListaAvaliacao[$i]['codigo_fichaavaliacao']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
 
                          </td>
                     </tr>

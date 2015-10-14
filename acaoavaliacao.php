@@ -7,13 +7,13 @@ if ($_GET['acao'] == 'cadastrar') {
      if ($VarInserirFichaAvaliacao = 1) {
           $VarConsultaUltimaFicha = $clsAvaliacao->ConsultaUltimaficha($_POST['id']);
           //print_r($VarConsultaUltimaFicha);
-          $VarInserirAnaminese = $clsAvaliacao->CadastrarAnaminese($_POST['qprincipal'], $_POST['matual'], $_POST['mprogessa'], $_POST['medicamentos'], $VarConsultaUltimaFicha [0]['id']);
+          $VarInserirAnaminese = $clsAvaliacao->CadastrarAnaminese($VarConsultaUltimaFicha [0]['id'], $_POST['qprincipal'], $_POST['matual'], $_POST['mprogessa'], $_POST['medicamentos']);
           //exit();
           $VarInserirExameFisico  = $clsAvaliacao->CadastrarExameFisico($_POST['peso'], $_POST['altura'], $_POST['imc'], $_POST['dolorosos'],$_POST['respiratoria'],$_POST['cardiaca'],$_POST['arterial'], $_POST['umbigo'],$_POST['abaixo'],$_POST['cima'],$_POST['temperatura'], $VarConsultaUltimaFicha [0]['id']);
         // exit();
           $VarInserirMovimentacao = $clsAvaliacao->CadastrarMovimentacao($VarConsultaUltimaFicha [0]['id'],$_POST['localruido'],$_POST['localrepouso'],$_POST['repouso'],$_POST['movimento'],$_POST['ruido'],$_POST['lmovimento']);
           $VarInserirPostural = $clsAvaliacao->CadastrarPostura($VarConsultaUltimaFicha [0]['id'], $_POST['descpostural']);
-          $VarInserirObjetivos = $clsAvaliacao->CadastrarObjetivos($_POST['descfisio'], $VarConsultaUltimaFicha [0]['id']);
+          $VarInserirObjetivos = $clsAvaliacao->CadastrarObjetivos($VarConsultaUltimaFicha [0]['id'],$_POST['descfisio']);
           
      }
     // exit();
