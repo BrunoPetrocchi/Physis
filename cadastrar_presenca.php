@@ -4,7 +4,7 @@
 
 <script type="text/javascript" src="js/scripts.js"></script>
 
-<form method="post" class="form-horizontal" name="cadalunos" id="cadalunos" action="?pagina=acaopresenca&acao=cadastrar">
+<form method="post" class="form-horizontal" name="cadpresec" id="cadpresec" action="?pagina=acaopresenca&acao=cadastrar">
      <div class="row">
           <div class="col-md-2">
                <label for="codigo">Código</label>
@@ -19,7 +19,7 @@
                     for ($i = 0; $i < count($VarConsultaAluno); $i++) {
                          ?>
                          <option value="<?php echo $VarConsultaAluno [$i]['codigo_paciente']; ?>">
-                              <?php echo $VarConsultaAluno [$i]['nome']; ?>
+                              <?php echo $VarConsultaAluno [$i]['aluno']; ?>
                          </option>
                          <?php
                     }

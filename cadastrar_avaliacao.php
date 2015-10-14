@@ -6,7 +6,7 @@
 
 
 
-<form method="post" class="form-horizontal" name="cadalunos" id="cadalunos" action="?pagina=acaoavaliacao&acao=cadastrar">
+<form method="post" class="form-horizontal" name="cadavaliacao" id="cadavaliacao" action="?pagina=acaoavaliacao&acao=cadastrar">
      <div class="row">
           <div class="col-md-2">
                <label for="codigo">Código</label>

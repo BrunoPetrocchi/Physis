@@ -25,6 +25,10 @@ $clsMensalidade = new Mensalidade();
 
 include ("classe/classAvaliacao");
 $clsAvaliacao = new Avaliacao();
+
+include ("classe/classPresenca.php");
+$clsPresenca = new Presenca();
+
 ?>		
 
 <!DOCTYPE HTML>

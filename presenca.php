@@ -8,15 +8,15 @@ $VarListaPresenca = $clsPresenca->ConsultarPresenca();
     <!-- <input type="text" class="form-control" placeholder="Consultar Fisioterapeuta" id="pesquisar" name="pesquisar">
      <br/>-->
      <table width="100%"  border="1" bordercolor="#CCCCCC" style="border-collapse:collapse;" cellpadding="0" cellspacing="0" id="tbl_relatorio" >
-          <thead>
-               <tr>
-                    <th>Código</th>
-                    <th>Nome</th>
-                    <th>Data da Presença</th>
-                    <th>Opções</th>
-               </tr>
-          </thead>
-          <?php
+<thead>
+     <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Data da Presença</th>
+          <th>Opções</th>
+     </tr>
+</thead>
+<?php
           for ($i = 0; $i < count($VarListaPresenca); $i++) {
                ?>
                <tbody border="solid 1px" bordercolor="#FFFFFF">
@@ -28,11 +28,11 @@ $VarListaPresenca = $clsPresenca->ConsultarPresenca();
                          <?php echo $VarListaPresenca [$i]['data_entrada']; ?></td>
                          <td><a href="#" onclick="javascript:confirmar(<?= $VarListaPresenca[$i]['codigo_presenca']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>
 
-                              <a href="?pagina=editar_presenca&id=<?php echo $VarListaPresenca[$i]['codigo_presenca']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
+                                   <a href="?pagina=editar_presenca&id=<?php echo $VarListaPresenca[$i]['codigo_presenca']; ?>"  title="Visualizar"><img src="img/visualizar.png" /></a>
 
-                         </td>
-                    </tr>
-               </tbody>
+                              </td>
+                         </tr>
+                    </tbody>
 
                <?php
           }

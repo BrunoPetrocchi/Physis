@@ -143,7 +143,7 @@ class Avaliacao {
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
      
-     
+
      
 
 }
