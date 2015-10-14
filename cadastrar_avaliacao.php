@@ -20,8 +20,8 @@
                     $VarConsultaAluno = $clsAlunos->ConsultarAlunos();
                     for ($i = 0; $i < count($VarConsultaAluno); $i++) {
                          ?>
-                         <option value="<?php echo $VarConsultaAluno [$i]['codigo_paciente']; ?>"<?php echo $VarConsultaAluno [$i]['codigo_paciente'] == $VarConsultarMensalidadeId [0]['codigo_paciente'] ? 'selected="selected"' : '' ?>>
-                              <?php echo $VarConsultaAluno [$i]['nome']; ?>
+                         <option value="<?php echo $VarConsultaAluno [$i]['codigo_paciente']; ?>">
+                              <?php echo $VarConsultaAluno [$i]['aluno']; ?>
                          </option>
                          <?php
                     }

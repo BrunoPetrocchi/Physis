@@ -1,4 +1,4 @@
-<h2><strong>Cadastrar Avaliação</strong></h2>
+<h2><strong>Editar Avaliação</strong></h2>
 <a href="?pagina=avaliacao"><input type="submit" value="Voltar" class="btncadastrar" id="btnvoltar" style="float:right" /></a>
 <br/> <br/>
 
@@ -11,7 +11,7 @@ $VarConsultaAvaliacao = $clsAvaliacao ->ConsultaFichaAvaliacao ($_GET['id']);
 ?>
 
 
-<form method="post" class="form-horizontal" name="cadalunos" id="cadalunos" action="?pagina=acaoavaliacao&acao=cadastrar&id=<?php echo $VarConsultaAvaliacao [0]['codigo_fichaavaliacao']; ?>">
+<form method="post" class="form-horizontal" name="cadalunos" id="cadalunos" action="?pagina=acaoavaliacao&acao=editar&id=<?php echo $VarConsultaAvaliacao [0]['codigo_fichaavaliacao']; ?>">
      <div class="row">
           <div class="col-md-2">
                <label for="codigo">Código</label>
@@ -26,7 +26,7 @@ $VarConsultaAvaliacao = $clsAvaliacao ->ConsultaFichaAvaliacao ($_GET['id']);
                     for ($i = 0; $i < count($VarConsultaAluno); $i++) {
                          ?>
                          <option value="<?php echo $VarConsultaAluno [$i]['codigo_paciente']; ?>"<?php echo $VarConsultaAluno [$i]['codigo_paciente'] == $VarConsultaAvaliacao [0]['codigo_paciente'] ? 'selected="selected"' : '' ?>>
-                              <?php echo $VarConsultaAluno [$i]['nome']; ?>
+                              <?php echo $VarConsultaAluno [$i]['aluno']; ?>
                          </option>
                          <?php
                     }

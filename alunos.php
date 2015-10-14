@@ -23,7 +23,7 @@ $VarListaAlunos = $clsAlunos->ConsultarAlunos();
                <tbody border="solid 1px" bordercolor="#FFFFFF">
                     <tr>
                          <td><?php echo $VarListaAlunos [$i]['codigo_paciente']; ?></td>
-                         <td><?php echo $VarListaAlunos [$i]['nome']; ?></td>
+                         <td><?php echo $VarListaAlunos [$i]['aluno']; ?></td>
                          <td><?php echo $VarListaAlunos [$i]['cpf']; ?></td>
                          <td><?php echo $VarListaAlunos [$i]['data_nascimento']; ?></td>
                          <td><a href="#" onclick="javascript:confirmar(<?= $VarListaAlunos[$i]['codigo_paciente']; ?>)" title="Apagar" ><img src="img/apagar.png" /></a>

@@ -51,12 +51,9 @@ class Alunos {
           '$cidade','$cep','$numero',
           '$profissao_atual',
           '$profissao_anterior','$responsavel_legal','$observacao',
-          '$professor','','0')";
+          '$professor','0')";
           
-           $sql = "insert into pilates.professor_paciente VALUES ('$professor',LAST_INSERT_ID());";
-           
-          
-           
+                   
           echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
@@ -65,7 +62,7 @@ class Alunos {
          // $array_data = explode('/', $data);
          // $data = mktime(0, 0, 0, $array_data[1], $array_data[0], $array_data[2]);
           $sql = "SELECT 
-          A.codigo_paciente, A.nome,
+          A.codigo_paciente, A.nome as aluno,
           A.data_nascimento, A.estado_civil,
           A.cpf, A.rg,
           A.telefone_fixo, A.telefone_celular,

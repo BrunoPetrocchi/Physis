@@ -78,6 +78,7 @@ $clsAvaliacao = new Avaliacao();
                   $_GET['pagina'] == "cadastrar_professor" ||
                   $_GET['pagina'] == "alunos" ||
                   $_GET['pagina'] == "cadastrar_alunos" ||
+                  $_GET['pagina'] == "editar_alunos" ||
                   $_GET['pagina'] == "patrimonio" ||
                   $_GET['pagina'] == "cadastrar_patrimonio" ||
                   $_GET['pagina'] == "editar_patrimonio" ||

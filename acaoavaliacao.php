@@ -1,22 +1,44 @@
 
 <?php
-
 if ($_GET['acao'] == 'cadastrar') {
      $VarInserirFichaAvaliacao = $clsAvaliacao->CadastrarAvaliacao($_POST['alunos'],$_POST['datepicker'], $_POST['professor']);
     // echo '<pre>';     print_r($VarInserirFichaAvaliacao);     echo '</pre>';  exit();
      if ($VarInserirFichaAvaliacao = 1) {
           $VarConsultaUltimaFicha = $clsAvaliacao->ConsultaUltimaficha($_POST['id']);
           //print_r($VarConsultaUltimaFicha);
-          $VarInserirAnaminese = $clsAvaliacao->CadastrarAnaminese($VarConsultaUltimaFicha [0]['id'], $_POST['qprincipal'], $_POST['matual'], $_POST['mprogessa'], $_POST['medicamentos']);
+          $VarInserirAnaminese = $clsAvaliacao->CadastrarAnaminese($VarConsultaUltimaFicha [0]['id'],$_POST['qprincipal'], $_POST['matual'], $_POST['mprogessa'], $_POST['medicamentos']);
           //exit();
           $VarInserirExameFisico  = $clsAvaliacao->CadastrarExameFisico($_POST['peso'], $_POST['altura'], $_POST['imc'], $_POST['dolorosos'],$_POST['respiratoria'],$_POST['cardiaca'],$_POST['arterial'], $_POST['umbigo'],$_POST['abaixo'],$_POST['cima'],$_POST['temperatura'], $VarConsultaUltimaFicha [0]['id']);
         // exit();
           $VarInserirMovimentacao = $clsAvaliacao->CadastrarMovimentacao($VarConsultaUltimaFicha [0]['id'],$_POST['localruido'],$_POST['localrepouso'],$_POST['repouso'],$_POST['movimento'],$_POST['ruido'],$_POST['lmovimento']);
           $VarInserirPostural = $clsAvaliacao->CadastrarPostura($VarConsultaUltimaFicha [0]['id'], $_POST['descpostural']);
           $VarInserirObjetivos = $clsAvaliacao->CadastrarObjetivos($VarConsultaUltimaFicha [0]['id'],$_POST['descfisio']);
+               }
+     exit();
+     echo '<script>alert("Avaliação Salvo com Sucesso");</script>';
+     echo "<script type='text/javascript'>window.location='?pagina=avaliacao'; </script>";
+}
+?>
+
+
+<?php
+if ($_GET['acao'] == 'editar') {
+     $VarEditarFichaAvaliacao = $clsAvaliacao->EditarAvaliacao($_POST['professor'], $_POST['datepicker'], $_POST['alunos'], $_GET['id']);
+    // echo '<pre>';     print_r($VarInserirFichaAvaliacao);     echo '</pre>';  exit();
+     if ($VarEditarFichaAvaliacao = 1) {
+          $VarConsultaUltimaFicha = $clsAvaliacao->ConsultaUltimaficha($_POST['id']);
+          //print_r($VarConsultaUltimaFicha);
+          $VarInserirAnaminese = $clsAvaliacao->EditarAnaminese($_POST['qprincipal'], $_POST['matual'], $_POST['mprogessa'], $_POST['medicamentos'],$_GET['id'], $VarConsultaUltimaFicha [0]['id']);
+          //exit();
+          $VarInserirExameFisico  = $clsAvaliacao->EditarExameFisico($_POST['peso'], $_POST['altura'], $_POST['imc'], $_POST['dolorosos'],$_POST['respiratoria'],$_POST['cardiaca'],$_POST['arterial'], $_POST['umbigo'],$_POST['abaixo'],$_POST['cima'],$_POST['temperatura'],  $_GET['id'],$VarConsultaUltimaFicha [0]['id']);
+        // exit();
+          $VarInserirMovimentacao = $clsAvaliacao->EditarMovimentacao($_GET['id'],$_POST['localruido'],$_POST['localrepouso'],$_POST['repouso'],$_POST['movimento'],$_POST['ruido'],$_POST['lmovimento'],$VarConsultaUltimaFicha [0]['id']);
           
-     }
-    // exit();
+          $VarInserirPostural = $clsAvaliacao->EditarPostura($_GET['id'], $_POST['descpostural'],$VarConsultaUltimaFicha [0]['id']);
+         
+          $VarInserirObjetivos = $clsAvaliacao->EditarObjetivos($_GET['id'],$_POST['descfisio'],$VarConsultaUltimaFicha [0]['id']);
+               }
+     //exit();
      echo '<script>alert("Avaliação Salvo com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=avaliacao'; </script>";
 }
