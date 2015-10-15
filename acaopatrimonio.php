@@ -3,7 +3,7 @@
 <?php
 
 if ($_GET['acao'] == 'cadastrar') {
-     $VarInserirPatrimonio = $clsPatrimonio->CadastrarPatrimonio($_POST['nome'], $_POST['quantidade'], $_POST['valor'], $_POST['datepicker'], $_POST['professor']);
+     $VarInserirPatrimonio = $clsPatrimonio->CadastrarPatrimonio($_POST['nome'], $_POST['datepicker'], $_POST['quantidade'], $_POST['valor'], $_POST['professor']);
      //echo '<pre>';     print_r($VarInserirAlunos);     echo '</pre>';
     //exit();
      echo '<script>alert("Patrimonio Salvo com Sucesso");</script>';

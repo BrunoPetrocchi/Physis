@@ -54,7 +54,23 @@ class Patrimonio {
           //echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
+     
+      public function RelPatrimonio() {
+          $array_data = explode('/', $data);
+          $data = mktime(0, 0, 0, $array_data[1], $array_data[0], $array_data[2]);
+          $sql = "SELECT
+          A.codigo_patrimonio, A.descricao,
+          A.data, A.quantidade , A.valor,
+          A.codigo_professor , B.nome
+          FROM pilates.patrimonio AS A
+          LEFT JOIN pilates.professor AS B ON (A.codigo_professor = B.codigo_professor)
+          WHERE A.apagado = 0
+          ORDER BY nome ";
+                    //echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
 
+          
 }
 
 //return MysqlManager::ExecutaConsultaMysql($sql, $this->db);

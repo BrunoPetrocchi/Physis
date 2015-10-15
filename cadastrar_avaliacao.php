@@ -71,14 +71,14 @@
      <div class="row">
           <div class="col-md-12">
                <label for="rg">História da Moléstia Pregressa: </label>
-               <input type="text" class="form-control" id="mprogessa" name="mprogessa" placeholder="Informe o RG"> 
+               <input type="text" class="form-control" id="mprogessa" name="mprogessa" placeholder="Informe a Moléstia Pregressa"> 
           </div>
      </div>
      <br/>
      <div class="row">
           <div class="col-md-12">
                <label for="rg">Medicamentos utilizados:  </label>
-               <input type="text" class="form-control" id="medicamentos" name="medicamentos" placeholder="Informe o RG"> 
+               <input type="text" class="form-control" id="medicamentos" name="medicamentos" placeholder="Informe o medicamento utilizado"> 
           </div>
      </div>
      <br/><br/>

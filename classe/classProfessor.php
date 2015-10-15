@@ -96,6 +96,14 @@ class Professores {
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
 
+     public function RelProfessor() {
+          $sql = "SELECT codigo_professor, nome, telefone_celular,
+          endereco,bairro,crefito FROM pilates.professor WHERE apagado = 1
+          ORDER BY codigo_professor DESC";
+          //echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+
 }
 
 //return MysqlManager::ExecutaConsultaMysql($sql, $this->db);

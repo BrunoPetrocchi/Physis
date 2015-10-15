@@ -25,7 +25,7 @@ class Presenca {
           FROM pilates.presenca AS A
           JOIN pilates.paciente AS B ON (B.codigo_paciente = A.codigo_paciente)
           WHERE A.apagado = 0
-          ORDER BY A.codigo_presenca";
+          ORDER BY A.codigo_presenca DESC";
           // echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }

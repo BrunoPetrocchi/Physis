@@ -1,7 +1,7 @@
 <?php
-$VarRelAlunos = $clsAlunos->RelAlunos();
+$VarRelProfessor = $clsProfessor->RelProfessor();
 ?>
-<h2><strong>Relatório de Alunos</strong></h2>
+<h2><strong>Relatório de Professores</strong></h2>
 <a href="?pagina=cadastrar_alunos"><input type="submit" value="Cadastrar" class="btncadastrar" style="float:right" /></a>
 <br/><br/>
 <form method="post" name="consultaraluno" id="consultarfisio">
@@ -11,26 +11,24 @@ $VarRelAlunos = $clsAlunos->RelAlunos();
           <thead>
                <tr>
                     <th>Código</th>
-                    <th>Alunos</th>
+                    <th>Nome</th>
                     <th>Tel. Celular</th>
                     <th>Endereço</th>
                     <th>Bairro</th>
-                    <th>Número</th>
-                    <th>Professor</th>
+                    <th>Crefito</th>
                </tr>
           </thead>
           <?php
-          for ($i = 0; $i < count($VarRelAlunos); $i++) {
+          for ($i = 0; $i < count($VarRelProfessor); $i++) {
                ?>
                <tbody border="solid 1px" bordercolor="#FFFFFF">
                     <tr>
-                         <td><?php echo $VarRelAlunos [$i]['codigo_paciente']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['aluno']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['telefone_celular']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['endereco']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['bairro']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['numero']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['Nome_Professor']; ?></td>
+                         <td><?php echo $VarRelProfessor [$i]['codigo_professor']; ?></td>
+                         <td><?php echo $VarRelProfessor [$i]['nome']; ?></td>
+                         <td><?php echo $VarRelProfessor [$i]['telefone_celular']; ?></td>
+                         <td><?php echo $VarRelProfessor [$i]['endereco']; ?></td>
+                         <td><?php echo $VarRelProfessor [$i]['bairro']; ?></td>
+                         <td><?php echo $VarRelProfessor [$i]['crefito']; ?></td>
                         
                     </tr>
                </tbody>
@@ -41,7 +39,7 @@ $VarRelAlunos = $clsAlunos->RelAlunos();
 
      </table>
      <br/>
-     Total de <strong><?php echo count($VarRelAlunos); ?></strong> Alunos.
+     Total de <strong><?php echo count($VarRelProfessor); ?></strong> Professores.
      <br/>
 </form>
 <script type="text/javascript">

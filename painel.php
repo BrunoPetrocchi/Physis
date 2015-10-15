@@ -96,6 +96,8 @@ $clsPresenca = new Presenca();
                   $_GET['pagina'] == "cadastrar_presenca" ||
                   $_GET['pagina'] == "relatorios" ||
                   $_GET['pagina'] == "relalunos" ||
+                  $_GET['pagina'] == "relprofessores" ||
+                  $_GET['pagina'] == "relpatrimonio" ||
                   $_GET['pagina'] == "editar_presenca"
           ) {
                require_once ($_GET['pagina'] . ".php");

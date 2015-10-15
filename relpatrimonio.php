@@ -1,8 +1,7 @@
 <?php
-$VarRelAlunos = $clsAlunos->RelAlunos();
+$VarRelPatrimonio = $clsPatrimonio->RelPatrimonio();
 ?>
-<h2><strong>Relatório de Alunos</strong></h2>
-<a href="?pagina=cadastrar_alunos"><input type="submit" value="Cadastrar" class="btncadastrar" style="float:right" /></a>
+<h2><strong>Relatório de Patrimônio</strong></h2>
 <br/><br/>
 <form method="post" name="consultaraluno" id="consultarfisio">
     <!-- <input type="text" class="form-control" placeholder="Consultar Fisioterapeuta" id="pesquisar" name="pesquisar">
@@ -11,26 +10,24 @@ $VarRelAlunos = $clsAlunos->RelAlunos();
           <thead>
                <tr>
                     <th>Código</th>
-                    <th>Alunos</th>
-                    <th>Tel. Celular</th>
-                    <th>Endereço</th>
-                    <th>Bairro</th>
-                    <th>Número</th>
+                    <th>Nome do Material</th>
+                    <th>Data Aquis.</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
                     <th>Professor</th>
                </tr>
           </thead>
           <?php
-          for ($i = 0; $i < count($VarRelAlunos); $i++) {
+          for ($i = 0; $i < count($VarRelPatrimonio); $i++) {
                ?>
                <tbody border="solid 1px" bordercolor="#FFFFFF">
                     <tr>
-                         <td><?php echo $VarRelAlunos [$i]['codigo_paciente']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['aluno']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['telefone_celular']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['endereco']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['bairro']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['numero']; ?></td>
-                         <td><?php echo $VarRelAlunos [$i]['Nome_Professor']; ?></td>
+                         <td><?php echo $VarRelPatrimonio [$i]['codigo_patrimonio']; ?></td>
+                         <td><?php echo $VarRelPatrimonio [$i]['descricao']; ?></td>
+                         <td><?php echo $VarRelPatrimonio [$i]['data']; ?></td>
+                         <td><?php echo $VarRelPatrimonio [$i]['quantidade']; ?></td>
+                         <td><?php echo $VarRelPatrimonio [$i]['valor']; ?></td>
+                         <td><?php echo $VarRelPatrimonio [$i]['nome']; ?></td>
                         
                     </tr>
                </tbody>
@@ -41,7 +38,7 @@ $VarRelAlunos = $clsAlunos->RelAlunos();
 
      </table>
      <br/>
-     Total de <strong><?php echo count($VarRelAlunos); ?></strong> Alunos.
+     Total de <strong><?php echo count($VarRelPatrimonio); ?></strong> Professores.
      <br/>
 </form>
 <script type="text/javascript">
