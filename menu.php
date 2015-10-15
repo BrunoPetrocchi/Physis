@@ -5,7 +5,7 @@
 
 <a href="?pagina=presenca"><div id="presenca"><img src="img/calendarios_off.png" /> <br/> <strong>Presen&ccedil;a</strong></a></div>
 
-<div id="relatorios"><img src="img/relatorios_off.png" /> <br/> <strong>Relat&oacute;rios</strong> </div>
+<a href="?pagina=relatorios"><div id="relatorios"><img src="img/relatorios_off.png" /> <br/> <strong>Relat&oacute;rios</strong></a> </div>
 
 <a href="?pagina=mensalidade"><div id="mensalidade"><img src="img/mensalidade_off.png" /> <br/> <strong>Mensalidade</strong></a> </div>
 

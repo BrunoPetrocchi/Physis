@@ -102,6 +102,22 @@ class Alunos {
           //echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
+     
+    public function RelAlunos() {
+          $sql = "SELECT 
+          A.codigo_paciente, A.nome as aluno,
+          A.telefone_fixo, A.telefone_celular,
+          A.endereco, A.bairro,
+          A.numero, 
+          B.nome as Nome_Professor
+          FROM pilates.paciente as A
+          LEFT JOIN pilates.professor as B ON (A.codigo_professor = B.codigo_professor)
+          WHERE A.apagado = 0 
+          ORDER BY A.codigo_paciente DESC";
+          //echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
+     }
+     
 
 }
 

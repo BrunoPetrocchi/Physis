@@ -1,5 +1,7 @@
 * {
-     font-family:sans-serif, Arial, Helvetica
+     font-family:sans-serif, Arial, Helvetica;
+     text-decoration:none !important;
+
 }
 body {
      background-color:#E9E9E9;
@@ -118,12 +120,12 @@ div#palco #tblexibir thead{
 }
 
 div#palco #tblexibir tr{
-   
+
      height:26px; 
 }
 
 #tblexibir tr:hover{
-    border: 2px solid #f1f1f1;
+     border: 2px solid #f1f1f1;
 }
 
 
@@ -138,7 +140,7 @@ div#palco #tblexibir div#apagar{
      height:20px;
      width:20px;
      margin-left:5px;
-    
+
 }
 
 
@@ -227,34 +229,61 @@ div#rodape div#descricao{
 }
 
 #tbl_relatorio {
-	width:100%;
-	text-align:left;
-	border-collapse:collapse;
-	font-size:12px;
-	border:solid 1px #ebebeb;
-	text-transform:uppercase;
+     width:100%;
+     text-align:left;
+     border-collapse:collapse;
+     font-size:12px;
+     border:solid 1px #ebebeb;
+     text-transform:uppercase;
 }
 #tbl_relatorio th {
-	border-right:1px solid #ebebeb;
-	border-bottom: 2px solid #ebebeb;
-	border-top:none;
-	color:#666;
-	padding:9px;
-	background-image: url(estudocom/tbl_bkg_th.png);
-	background-position:top;
-	background-repeat:repeat-x;
-	text-align:center;
-	background-color:#ebebeb;
-	font-weight:bold;
-	font-family: 'Open Sans', sans-serif, Helvetica;
-	text-transform:uppercase;
-	background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%) repeat scroll 0 0 #f2f2f2;
+     border-right:1px solid #ebebeb;
+     border-bottom: 2px solid #ebebeb;
+     border-top:none;
+     color:#666;
+     padding:9px;
+     background-image: url(estudocom/tbl_bkg_th.png);
+     background-position:top;
+     background-repeat:repeat-x;
+     text-align:center;
+     background-color:#ebebeb;
+     font-weight:bold;
+     font-family: 'Open Sans', sans-serif, Helvetica;
+     text-transform:uppercase;
+     background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%) repeat scroll 0 0 #f2f2f2;
 }
 #tbl_relatorio tr:hover {
-	background-color:#FFC !important;
+     background-color:#FFC !important;
 }
 #tbl_relatorio td {
-	border:solid 1px #ebebeb;
-	color:#666;
-	padding:5px;
+     border:solid 1px #ebebeb;
+     color:#666;
+     padding:5px;
 }
+#relalunos, #relprof, #relpat{    
+     border-radius: 5px 5px 5px 5px;
+     font-size: 18px;
+     border: 3px solid #DBDBDB;
+     width: 220px;
+     height:40px;
+     text-align:center;
+     text-decoration:none;
+     padding-top:5px;
+}
+
+#relalunos:hover, #relprof:hover, #relpat:hover{    
+     border-radius: 5px 5px 5px 5px;
+     font-size: 18px;
+     border: 3px solid #06C;
+     width: 220px;
+     height:40px;
+     text-transform:none;
+     text-align:center;
+     text-decoration:none;
+     padding-top:5px;
+}
+#relatorios{
+     margin-left: 35%;
+     margin-top: 100px;
+}
+
