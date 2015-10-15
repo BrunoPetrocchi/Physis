@@ -1,7 +1,7 @@
 
 <?php
 if ($_GET['acao'] == 'cadastrar') {
-     $VarInserirFichaAvaliacao = $clsAvaliacao->CadastrarAvaliacao($_POST['alunos'],$_POST['datepicker'], $_POST['professor']);
+     $VarInserirFichaAvaliacao = $clsAvaliacao->CadastrarAvaliacao($_POST['professor'],$_POST['datepicker'], $_POST['alunos']);
     // echo '<pre>';     print_r($VarInserirFichaAvaliacao);     echo '</pre>';  exit();
      if ($VarInserirFichaAvaliacao = 1) {
           $VarConsultaUltimaFicha = $clsAvaliacao->ConsultaUltimaficha($_POST['id']);
@@ -14,7 +14,7 @@ if ($_GET['acao'] == 'cadastrar') {
           $VarInserirPostural = $clsAvaliacao->CadastrarPostura($VarConsultaUltimaFicha [0]['id'], $_POST['descpostural']);
           $VarInserirObjetivos = $clsAvaliacao->CadastrarObjetivos($VarConsultaUltimaFicha [0]['id'],$_POST['descfisio']);
                }
-     exit();
+   //  exit();
      echo '<script>alert("Avaliação Salvo com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=avaliacao'; </script>";
 }

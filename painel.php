@@ -116,7 +116,6 @@ $clsPresenca = new Presenca();
 
 
      <script>
-
           $("#cpf").mask("999.999.999-99");
           $("#crefito").mask("9/999999-F");
           $("#cep").mask("99999-999");

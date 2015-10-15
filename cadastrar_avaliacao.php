@@ -5,7 +5,6 @@
 <script type="text/javascript" src="js/scripts.js"></script>
 
 
-
 <form method="post" class="form-horizontal" name="cadavaliacao" id="cadavaliacao" action="?pagina=acaoavaliacao&acao=cadastrar">
      <div class="row">
           <div class="col-md-2">
@@ -158,18 +157,22 @@
                <label for="rg">Presença de Pontos Dolorosos:  </label>  
                <textarea class="form-control" name="dolorosos" rows="3"></textarea> </div>
      </div>
+
+
+
      <br/><br/>
      <h3>Exame de Movimentação</h3>
      <br/><br/>     
      <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4" >
                <label for="ruido">Ruídos Articulares: </label>
-               <select class="form-control" id="ruido" name="ruido">
+               <select class="form-control" id="ruido" name="ruido" >
                     <option value="">Selecione</option>
-                    <option value="1">Sim</option>
+                    <option value="1" >Sim</option>
                     <option value="0">Não</option>
                </select>
           </div>
+
           <div class="col-md-8">
                <label for="localruido">Local:</label>
                <input type="text" class="form-control" id="localruido" name="localruido" placeholder="Informe a queixa principal">
@@ -220,12 +223,10 @@
                <textarea class="form-control"  id="descfisio" name="descfisio" rows="3"></textarea>
           </div>
      </div>
-     
-     <br/><br/>
+
      <div id="botoes" >
           <div class="col-md-4">
                <input type="submit"  class="btn btn-success" id="btnsalvar" name="salvar" value="Salvar"/>              
           </div>
      </div>
-     
 </form>

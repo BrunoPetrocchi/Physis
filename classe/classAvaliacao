@@ -103,10 +103,11 @@ class Avaliacao {
         
      public function ConsultaAvaliacao() {
 
-          $sql = "SELECT A.codigo_fichaavaliacao,A.codigo_professor, B.nome AS PROFESSOR,  A.codigo_paciente, C.nome AS ALUNO, A.periodo FROM pilates.ficha_avaliacao as A
-          JOIN pilates.professor as B ON (B.codigo_professor = A.codigo_fichaavaliacao)
-          JOIN pilates.paciente as C ON(C.codigo_paciente = A.codigo_fichaavaliacao)
-          WHERE A.apagado  = '0'";
+          $sql = "SELECT A.codigo_fichaavaliacao, A.codigo_professor, B.nome AS PROFESSOR , A.periodo, C.nome AS ALUNO, A.codigo_paciente, A.apagado
+          FROM pilates.ficha_avaliacao as A
+          LEFT JOIN pilates.professor as B ON (A.codigo_professor = B.codigo_professor)
+          LEFT JOIN pilates.paciente as C ON (A.codigo_paciente =  C.codigo_paciente)
+          WHERE A.apagado = 0 ORDER BY A.codigo_fichaavaliacao DESC";
                     //echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }

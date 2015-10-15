@@ -40,7 +40,7 @@ $VarListaAvaliacao = $clsAvaliacao->ConsultaAvaliacao();
 
      </table>
      <br/>
-     Total de <strong><?php echo count($VarListaAlunos); ?></strong> Alunos Ativos.
+     Total de <strong><?php echo count($VarListaAvaliacao); ?></strong> Avaliação Ativas.
      <br/>
 </form>
 <script type="text/javascript">
