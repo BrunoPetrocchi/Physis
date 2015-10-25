@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/Physis/relatorios.php</file>
-            <file>file:/C:/wamp/www/Physis/painel.php</file>
+            <file>file:/C:/wamp/www/Physis/editar_avaliacao.php</file>
             <file>file:/C:/wamp/www/Physis/menu.php</file>
-            <file>file:/C:/wamp/www/Physis/css/estilo.css</file>
-            <file>file:/C:/wamp/www/Physis/classe/classAlunos.php</file>
+            <file>file:/C:/wamp/www/Physis/painel.php</file>
+            <file>file:/C:/wamp/www/Physis/acaoavaliacao.php</file>
+            <file>file:/C:/wamp/www/Physis/classe/classAvaliacao</file>
+            <file>file:/C:/wamp/www/Physis/cadastrar_avaliacao.php</file>
         </group>
     </open-files>
 </project-private>

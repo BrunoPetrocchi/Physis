@@ -39,7 +39,7 @@ if ($_GET['acao'] == 'editar') {
           $VarInserirObjetivos = $clsAvaliacao->EditarObjetivos($_GET['id'],$_POST['descfisio'],$VarConsultaUltimaFicha [0]['id']);
                }
      //exit();
-     echo '<script>alert("Avaliação Salvo com Sucesso");</script>';
+     echo '<script>alert("Avaliação Alterado com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=avaliacao'; </script>";
 }
 ?>

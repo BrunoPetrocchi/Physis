@@ -51,7 +51,7 @@ class Avaliacao {
 
      public function EditarExameFisico($peso, $altura, $imc, $dolorosos, $respiratorio, $cardiaca, $pressao, $umbigo, $baixo, $cima, $temperatura, $codficha_avali, $id) {
 
-          $sql = "UPDATE pilates.exame_fisico SET  peso='$peso',altura='$atura',imc='$imc',ponto_doloroso='$dolorosos',
+          $sql = "UPDATE pilates.exame_fisico SET  peso='$peso',altura='$altura',imc='$imc',ponto_doloroso='$dolorosos',
           freq_respiratoria='$respiratorio', freq_cardiaca='$cardiaca', pressao='$pressao', umbigo='$umbigo', umbigo_baixo='$baixo',
           umbigo_cima='$cima',temperatura='$temperatura',codigo_fichaavaliacao='$codficha_avali' WHERE codigo_exame_fisico = '$id';";
            echo $sql;
@@ -132,11 +132,11 @@ class Avaliacao {
                pilates.ficha_avaliacao AS A
                LEFT JOIN pilates.professor AS B ON (A.codigo_fichaavaliacao = B.codigo_professor )
                LEFT JOIN pilates.paciente AS C ON(A.codigo_fichaavaliacao = C.codigo_paciente )
-               LEFT JOIN pilates.anaminese AS D ON(A.codigo_fichaavaliacao = D.codigo_anaminese)
-               LEFT JOIN pilates.avaliacao_postural AS E ON(A.codigo_fichaavaliacao = E.codigo_avaliacaopostural)
-               LEFT JOIN pilates.exame_fisico AS F ON(A.codigo_fichaavaliacao = F.codigo_exame_fisico)
-               LEFT JOIN pilates.movimentacao AS G ON(A.codigo_fichaavaliacao = G.codigo_movimentacao)
-               LEFT JOIN pilates.objetivos AS H ON(A.codigo_fichaavaliacao = H.codigo_objetivo)
+               LEFT JOIN pilates.anaminese AS D ON(A.codigo_fichaavaliacao = D.codigo_fichaavaliacao)
+               LEFT JOIN pilates.avaliacao_postural AS E ON(A.codigo_fichaavaliacao = E.codigo_fichaavaliacao)
+               LEFT JOIN pilates.exame_fisico AS F ON(A.codigo_fichaavaliacao = F.codigo_fichaavaliacao)
+               LEFT JOIN pilates.movimentacao AS G ON(A.codigo_fichaavaliacao = G.codigo_fichaavaliacao)
+               LEFT JOIN pilates.objetivos AS H ON(A.codigo_fichaavaliacao = H.codigo_fichaavaliacao)
                WHERE
                A.codigo_fichaavaliacao = '$id' AND
                A.apagado  = 0";

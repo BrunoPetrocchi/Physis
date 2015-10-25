@@ -94,7 +94,11 @@
                <input type="text" class="form-control" id="altura" name="altura" placeholder="Informe a altura"> 
           </div>
           <div class="col-md-4">
-               <label for="imc">IMC:  </label>
+               <label for="imc">IMC:
+               
+ 
+               
+               </label>
                <input type="text" class="form-control" id="imc" name="imc" readonly> 
           </div>
      </div>
