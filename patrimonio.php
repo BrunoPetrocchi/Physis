@@ -39,7 +39,7 @@ $VarListaPatrimonio = $clsPatrimonio->ConsultaPatrimonio();
 
      </table>
      <br/>
-     Total de <strong><?php echo count($VarListaPatrimonio); ?></strong> Alunos Ativos.
+     Total de <strong><?php echo count($VarListaPatrimonio); ?></strong> Patrimônios Ativos.
      <br/>
 </form>
 <script type="text/javascript">

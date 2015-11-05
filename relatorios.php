@@ -1,7 +1,11 @@
 <h2><strong>Relatórios</strong></h2>
 <div id="relatorios">
      <div id="relalunos">
-          <a href="?pagina=relalunos.php">Relatório de Alunos</a>
+          <a href="?pagina=rellog">Log Matricula</a>
+     </div>
+     <br/>
+     <div id="relalunos">
+          <a href="?pagina=relalunos">Relatório de Alunos</a>
      </div>
      <br/>
      <div id="relprof">

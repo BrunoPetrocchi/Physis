@@ -2,7 +2,7 @@
 <?php
      $VarEditarPresenca=$clsPresenca->ConsultarPresencaId($_GET['id']);
 ?>
-<h2><strong>Cadastrar Presença</strong></h2>
+<h2><strong>Editar Presença</strong></h2>
 <a href="?pagina=presenca"><input type="submit" value="Voltar" class="btncadastrar" id="btnvoltar" style="float:right" /></a>
 <br/> <br/>
 
