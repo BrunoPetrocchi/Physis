@@ -71,10 +71,16 @@ class Mensalidade {
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
 
-     public function ExcluirProfessor($id) {
-          $sql = "UPDATE pilates.professor SET apagado = 0  where codigo_professor = '$id'";
-          //echo $sql;
+     public function ExcluirMensalidade($id) {
+          $sql = "UPDATE pilates.mensalidade SET apagado = 1  where codigo_mensalidade = '$id'";
+         // echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+     }
+     
+     public function ConsultaUltimaMensalidade() {
+          $sql = "SELECT MAX(codigo_mensalidade) AS id FROM pilates.mensalidade;";
+          //   echo $sql;
+          return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }
 
 }

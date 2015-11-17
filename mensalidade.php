@@ -42,9 +42,9 @@ $VarListaMensalidade = $clsMensalidade->ConsultarMensalidade();
      <br/>
 </form>
 <script type="text/javascript">
-     function confirmar(codigo_paciente) { // pode ser qualquer nome
+     function confirmar(codigo_mensalidade) { // pode ser qualquer nome
           if (confirm("Deseja Realmente Excluir?")) {
-               window.location = "?pagina=acaoalunos&acao=excluir&id=" + codigo_paciente; // pode ser qualquer nome
+               window.location = "?pagina=acaomensalidade&acao=excluir&id=" + codigo_mensalidade; // pode ser qualquer nome
                return true;
           } else {
                return false;

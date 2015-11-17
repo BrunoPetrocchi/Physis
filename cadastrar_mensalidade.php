@@ -19,7 +19,7 @@
                     for ($i = 0; $i < count($VarConsultaAluno); $i++) {
                          ?>
                          <option value="<?php echo $VarConsultaAluno [$i]['codigo_paciente']; ?>">
-                              <?php echo $VarConsultaAluno [$i]['nome']; ?>
+                              <?php echo $VarConsultaAluno [$i]['aluno']; ?>
                          </option>
                          <?php
                     }

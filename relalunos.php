@@ -2,6 +2,9 @@
 $VarRelAlunos = $clsAlunos->RelAlunos();
 ?>
 <h2><strong>Relatório de Alunos</strong></h2>
+<!-- Chama o PDF -->
+<p> <a href="./relalunopdf.php" target="_blank">[Gerar PDF]</a></p>
+<!-- Chama o PDF -->
 <form method="post" name="consultaraluno" id="consultarfisio">
     <!-- <input type="text" class="form-control" placeholder="Consultar Fisioterapeuta" id="pesquisar" name="pesquisar">
      <br/>-->
@@ -42,13 +45,3 @@ $VarRelAlunos = $clsAlunos->RelAlunos();
      Total de <strong><?php echo count($VarRelAlunos); ?></strong> Alunos.
      <br/>
 </form>
-<script type="text/javascript">
-     function confirmar(codigo_paciente) { // pode ser qualquer nome
-          if (confirm("Deseja Realmente Excluir?")) {
-               window.location = "?pagina=acaoalunos&acao=excluir&id=" + codigo_paciente; // pode ser qualquer nome
-               return true;
-          } else {
-               return false;
-          }
-     }
-</script>

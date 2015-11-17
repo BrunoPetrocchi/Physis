@@ -5,6 +5,7 @@ require "login_verifica.php";
 //echo "<pre>";	print_r($_SESSION);echo "</pre>"; 
 
 include_once ("config/conexao.php");
+
 include_once ("config/mysqlmanager.php");
 $db = new MysqlManager();
 
@@ -28,6 +29,9 @@ $clsAvaliacao = new Avaliacao();
 
 include ("classe/classPresenca.php");
 $clsPresenca = new Presenca();
+
+include ("classe/classLog.php");
+$clsLog = new Log();
 ?>		
 
 <!DOCTYPE HTML>
@@ -98,7 +102,8 @@ $clsPresenca = new Presenca();
                 $_GET['pagina'] == "rellog" ||
                 $_GET['pagina'] == "relprofessores" ||
                 $_GET['pagina'] == "relpatrimonio" ||
-                $_GET['pagina'] == "rellogpdf"||
+                $_GET['pagina'] == "rellogpdf"||           
+                $_GET['pagina'] == "relalunopfd"||
                 $_GET['pagina'] == "editar_presenca"
         ) {
             require_once ($_GET['pagina'] . ".php");

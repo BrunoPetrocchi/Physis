@@ -2,29 +2,32 @@
 include_once ("config/conexao.php");
 include_once ("config/mysqlmanager.php");
 $db = new MysqlManager();
-include ("classe/classAlunos.php");
-$clsAlunos = new Alunos();
+include ("classe/classLog.php");
+$clsLog = new Log();
 require_once("dompdf/dompdf_config.inc.php");
-$VarRelAlunos = $clsAlunos->RelAlunos();
+$VarRellog = $clsLog->RelLog();
 $html = '<html><header></header><body>';
 $html .= '
+     <h2>Relatorio de Log Mensalidades</h2>
  <table width="100%"  border="1" bordercolor="#CCCCCC" style="border-collapse:collapse;" cellpadding="0" cellspacing="0" id="tbl_relatorio" >
-    <tr>
-    <th>Código Mensalidade</th>
-    <th>Usuário Cad.</th>
-    <th>Data Cad.</th>
-    <th>Usuario Exclusão</th>
-    <th>Data Exclusão</th>
-  </tr>
+<tr>
+<th>Professor</th>
+<th>Mensalidade</th>
+<th>Data Alteração</th>
+<th>Aluno</th>
+<th>Apagado</th>
+<th>Usuário</th>
+</tr>
 ';
-for ($i = 0; $i < count($VarRelAlunos); $i++) {
+for ($i = 0; $i < count($VarRellog); $i++) {
      $html .= '
                <tr>
-               <td>'.$VarRelAlunos [$i]['codigo_paciente'].'</td>
-               <td>'.$VarRelAlunos [$i]['aluno'].'</td>
-               <td>'.$VarRelAlunos [$i]['telefone_celular'].'</td>
-               <td>'.$VarRelAlunos [$i]['endereco'].'</td>
-               <td>'.$VarRelAlunos [$i]['bairro'].'</td>
+               <td>'.$VarRellog [$i]['PROFESSOR'].'</td>
+               <td>'.$VarRellog [$i]['codigo_mensalidade'].'</td>
+               <td>'.date('d/m/Y - h:i:s ' , $VarRellog [$i]['data_alteracao']).'</td>
+               <td>'.$VarRellog [$i]['ALUNO'].'</td>
+               <td>'.$VarRellog [$i]['regapagado'].'</td>
+               <td>'.$VarRellog [$i]['regusuario'].'</td>
                </tr>
      ';	  
 }

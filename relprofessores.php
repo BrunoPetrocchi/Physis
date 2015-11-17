@@ -2,6 +2,7 @@
 $VarRelProfessor = $clsProfessor->RelProfessor();
 ?>
 <h2><strong>Relatório de Professores</strong></h2>
+<p> <a href="./relprofpdf.php" target="_blank">[Gerar PDF]</a></p>
 <form method="post" name="consultaraluno" id="consultarfisio">
     <!-- <input type="text" class="form-control" placeholder="Consultar Fisioterapeuta" id="pesquisar" name="pesquisar">
      <br/>-->

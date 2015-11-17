@@ -2,7 +2,7 @@
 $VarRelPatrimonio = $clsPatrimonio->RelPatrimonio();
 ?>
 <h2><strong>Relatório de Patrimônio</strong></h2>
-<br/><br/>
+<p> <a href="./relpatrimoniopdf.php" target="_blank">[Gerar PDF]</a></p>
 <form method="post" name="consultaraluno" id="consultarfisio">
     <!-- <input type="text" class="form-control" placeholder="Consultar Fisioterapeuta" id="pesquisar" name="pesquisar">
      <br/>-->

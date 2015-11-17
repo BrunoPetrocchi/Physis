@@ -3,29 +3,28 @@
 
 if ($_GET['acao'] == 'cadastrar') {
      $VarInserirMensalidade = $clsMensalidade->CadastrarMensalidade($_POST['professor'],$_POST['mensalidade'], $_POST['alunos'], $_POST['pagamento'], $_POST['parcela'], $_POST['datepicker1'], $_POST['datepicker']);
-     //echo '<pre>';     print_r($VarInserirAlunos);     echo '</pre>';
-    // exit();
+     if($VarInserirMensalidade == 1){
+          $VarConsultaUltimaMensalidade = $clsMensalidade->ConsultaUltimaMensalidade($_POST['id']);
+          $VarConsultaMensalidadeLog = $clsLog->InserirLog($_POST['professor'],$VarConsultaUltimaMensalidade[0]['id'],$_POST['data'],$_POST['alunos'],$_POST['mensalidade'],$_SESSION['nome']);
+         // echo '<pre>';     print_r($VarConsultaMensalidadeLog);     echo '</pre>';
+         /// exit();
+     }
      echo '<script>alert("Mensalidade Salvo com Sucesso");</script>';
      echo "<script type='text/javascript'>window.location='?pagina=mensalidade'; </script>";
 }
 ?>
 
 <?php
-
-if ($_GET['acao'] == 'editar') {
-      $VarEditarMensalidade = $clsMensalidade->EditaMensalidade($_GET['id'], $_POST['professor'], $_POST['mensalidade'], $_POST['alunos'], $_POST['pagamento'], $_POST['parcela'], $_POST['datepicker1'], $_POST['datepicker']);
-     //echo '<pre>';     print_r($VarEditarMensalidade);     echo '</pre>';
-     //exit();
-     echo '<script>alert("Mensalidade Alterada com Sucesso");</script>';
-     echo "<script type='text/javascript'>window.location='?pagina=mensalidade'; </script>";
-}
-?>
-<?php
-
+$VarListaMensalidade = $clsMensalidade->ConsultarMensalidade();
 if ($_GET['acao'] == 'excluir') {
-     $VarExcluirAlunos = $clsAlunos->ExcluirAlunos($_GET['id']);
-}
-if ($VarExcluirAlunos == 1) {
+     $VarExcluirMensalidade = $clsMensalidade->ExcluirMensalidade($_GET['id']);
+     if ($VarExcluirMensalidade == 1) {
+          $ConsultaUltimoLogApagado = $clsLog->ConsultaUltimoLogApagado($_POST['id'],$_GET['codigo_professor'],$_GET['data_alteracao'],$_GET['codigo_paciente']);
+          $VarInserirMensalidadeLog = $clsLog->InserirNovoLog($VarListaMensalidade[0]['codigo_professor'],$VarListaMensalidade[0]['codigo_mensalidade'],$ConsultaUltimoLogApagado[0]['data_alteracao'],$VarListaMensalidade[0]['codigo_paciente'],$_SESSION['nome']);
+           //echo '<pre>';     print_r($ConsultaUltimoLogApagado);     echo '</pre>';
+           //exit();
+       }
+
      ?>    
      <script type="text/javascript">
           alert("Exclusão Efetuada com Sucesso!");
@@ -33,6 +32,6 @@ if ($VarExcluirAlunos == 1) {
      </script>
 
      <?php
-
+   
 }
 ?> 
