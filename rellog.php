@@ -1,5 +1,6 @@
 <?php
      $VarRellog = $clsLog->RelLog();
+    
 ?>
 <h2><strong>Relatório de Log</strong></h2>
 <!-- Chama o PDF -->

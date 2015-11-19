@@ -65,7 +65,7 @@ class Patrimonio {
           FROM pilates.patrimonio AS A
           LEFT JOIN pilates.professor AS B ON (A.codigo_professor = B.codigo_professor)
           WHERE A.apagado = 0
-          ORDER BY nome ";
+          ORDER BY A.codigo_patrimonio DESC  ";
                     //echo $sql;
           return MysqlManager::ExecutaConsultaMysql($sql, $this->db);
      }

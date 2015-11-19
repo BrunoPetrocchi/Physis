@@ -8,19 +8,19 @@ class Log {
           $this->db = $GLOBALS[db_homepage];
      }
 
-     public function InserirLog($codigo_professor,$codigo_mensalidade,$dataentrada,$aluno,$valor_atual,$regusuario) {
+     public function InserirLog($codigo_professor,$codigo_mensalidade,$dataentrada,$aluno,$valor_atual,$regapagado,$regusuario) {
           $dataentrada = time();
-          $sql = "INSERT INTO pilates.log VALUES (NULL,'$codigo_professor','$codigo_mensalidade','$dataentrada','$aluno','N','$regusuario')";
-          echo $sql;
+          $sql = "INSERT INTO pilates.log VALUES (NULL,'$codigo_professor','$codigo_mensalidade','$dataentrada','$aluno','$regapagado','$regusuario')";
+         // echo $sql;
           return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
      }
      
-     public function InserirNovoLog($codigo_professor,$codigo_mensalidade,$dataentrada,$aluno,$valor_atual,$regusuario) {
-          $dataentrada = time();
-          $sql = "INSERT INTO pilates.log VALUES (NULL,'$codigo_professor','$codigo_mensalidade','$dataentrada','$aluno','S','$regusuario')";
-          echo $sql;
-          return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
-     }
+   //  public function InserirNovoLog($codigo_professor,$codigo_mensalidade,$dataentrada,$aluno,$valor_atual,$regusuario) {
+   //       $dataentrada = time();
+   //       $sql = "INSERT INTO pilates.log VALUES (NULL,'$codigo_professor','$codigo_mensalidade','$dataentrada','$aluno','S','$regusuario')";
+   //       echo $sql;
+   //       return MysqlManager::ExecutaPersistenciaMysql($sql, $this->db);
+   //  }
      
      public function ConsultaUltimoLog() {
           $sql = "SELECT MAX(codigo_log) AS id FROM pilates.log;";
